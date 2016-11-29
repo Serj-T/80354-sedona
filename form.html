@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sedona">
+  <meta name="keywords" content="Sedona, гостиница, отель, форма">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sedona форма</title>
+</head>
+<body>
+
+<header class="main-header">
+  <nav class="main-nav  main-nav--closed  main-nav--nojs">
+    <button class="main-nav__btn-close">Закрыть</button>
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a class="btn  btn--nav" href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a class="btn  btn--nav" href="photo.html">Фото и видео</a></li>
+      <li class="main-nav__item"><a class="btn  btn--nav" href="form.html">Форма отзыва</a></li>
+      <li class="main-nav__item"><a class="btn  btn--nav" href="https://htmlacademy.ru/">Html academy</a></li>
+    </ul>
+  </nav>
+  <div class="logo">
+    <a href="index.html"><img src="#" alt="Седона лого" width="102" height="83"></a>
+  </div>
+  <a class="main-nav__btn" href="#">Меню</a>
+</header>
+
+<header class="page-title">
+  <h1>Оставьте свой отзыв</h1>
+  <p>Помогите нашим отелям стать лучше! оставьте отзыв о них,
+  а также о посещенных вами достопримечательностях</p>
+</header>
+
+<div class="page-wrap">
+
+  <form action="https://echo.htmlacademy.ru">
+
+    <fieldset class="form-name">
+      <legend>Представьтесь:</legend>
+      <input id="name1" type="text" name="name1">
+      <input id="name2" type="text" name="name2">
+      <input id="name3" type="text" name="name3">
+      <label for="name1">Имя*:</label>
+      <label for="name2">Фамилия:</label>
+      <label for="name3">Отчество:</label>
+    </fieldset>
+
+    <fieldset class="form-contact">
+      <legend>Контактная информация:</legend>
+      <input id="tel" type="tel" name="tel">
+      <input id="email" type="email" name="email">
+      <label for="tel">Контактный телефон*:</label>
+      <span class="notice  hide">Ошибка, перепроверьте номер</span>
+      <label for="email">Электронная почта*:</label>
+    </fieldset>
+
+    <fieldset class="form-quiz">
+      <legend>Ваше общее впечатление:</legend>
+      <input id="good" type="radio" name="radio" value="good">
+      <input id="bad" type="radio" name="radio" value="bad">
+      <input id="unknown" type="radio" name="radio" value="unknown">
+
+      <label for="good">Скорее положительное</label>
+      <label for="bad">Скорее отрицательное</label>
+      <label for="unknown">Затрудняюсь ответить</label>
+    </fieldset>
+
+    <fieldset class="form-visited">
+      <legend>Посещенные достопримечательности:</legend>
+      <input id="bridge" type="checkbox" name="checkbox" value="bridge">
+      <input id="park" type="checkbox" name="checkbox" value="park">
+      <input id="mountain" type="checkbox" name="checkbox" value="mountain">
+      <input id="red-rocks" type="checkbox" name="checkbox" value="red-rocks">
+
+      <label for="bridge">Мост дьявола</label>
+      <label for="park">Слайд-парк</label>
+      <label for="mountain">Гора-Колокол</label>
+      <label for="red-rocks">Красные скалы</label>
+    </fieldset>
+
+    <fieldset class="form-review">
+      <legend>Опишите свои эмоции:</legend>
+      <textarea name="review" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+    </fieldset>
+
+    <input class="btn  btn--submit" type="submit" value="Отправить отзыв">
+
+  </form>
+
+</div>
+
+<div class="modal  modal-error  modal-error--on">
+  <div class="modal__wrap">
+    <h2 class="modal-error__title">Что-то пошло не так</h2>
+    <p class="modal-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="btn  btn--close">ОК</button>
+  </div>
+</div>
+
+<div class="modal  modal--success  modal--on">
+  <div class="modal__wrap">
+    <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+    <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="btn  btn--close">Закрыть окно</button>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <a class="main-footer__hashtag">#visitsedona</a>
+  <ul class="social">
+    <li class="social__item"><a class="btn  btn--social  btn--twitter" href="">Twitter</a></li>
+    <li class="social__item"><a class="btn  btn--social  btn--facebook" href="">Facebook</a></li>
+    <li class="social__item"><a class="btn  btn--social  btn--youtube" href="">YouTube</a></li>
+  </ul>
+  <a class="main-footer__copyright">
+    Разработано
+  </a>
+</footer>
+
+</body>
+</html>
