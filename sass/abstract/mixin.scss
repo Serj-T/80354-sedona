@@ -30,13 +30,4 @@
     @content;
   }
 }
-input,
-textarea {
-    @include placeholder {
-    opacity: 1;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000000;
-    font-weight: bold;
-  }
-}
+
