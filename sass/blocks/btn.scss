@@ -1,0 +1,31 @@
+.btn {
+  @include btn-reset()
+  display: block;
+  font-size: 18px;
+  line-height: 56px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  background-color: $blue;
+  overflow: hidden;
+
+  &--book-search {
+    font-size: 21px;
+    line-height: 58px;
+  }
+  &--social {
+    font-size: 0;
+    width: 46px;
+    height: 48px;
+  }
+  &--twitter {
+    background: $blue url("../../img/icon-twitter.svg") no-repeat 50% 50%;
+  }
+  &--facebook {
+    width: 47px;  /* ¯\_(ツ)_/¯ */
+    background: $blue url("../../img/icon-facebook.svg") no-repeat 50% 50%;
+  }
+  &--youtube {
+    background: $blue url("../../img/icon-youtube.svg") no-repeat 50% 50%;
+  }
+}

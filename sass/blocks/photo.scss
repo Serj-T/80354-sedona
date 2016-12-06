@@ -1,0 +1,29 @@
+.photo {
+  border-top: 1px solid #e5e5e5;
+}
+.photo__wrap {
+  @include wrap();
+  padding-top: 22px;
+  padding-bottom: 16px;
+}
+.photo__img {
+  width: 280px;
+  height: 280px;
+}
+.photo__title {
+  margin-bottom: 0px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.photo__author {
+  text-transform: none;
+}
+.photo__likes {
+  margin-top: 5px;
+}
+.photo__likes img {
+  margin-right: 10px;
+}
+.photo__likes span {
+  font-weight: bold;
+}

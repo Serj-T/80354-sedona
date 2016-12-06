@@ -1,0 +1,46 @@
+.page-header {
+  position: relative;
+  padding-bottom: 14px;
+}
+.page-header__wrap {
+  @include wrap();
+  text-align: center;
+}
+.page-header__background {
+  box-sizing: border-box;
+  height: 158px;
+  margin-bottom: 38px;
+  padding-top: 51px;
+  text-align: center;
+  background-size: cover;
+  background: url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: 50% 100%;
+
+  &--big {
+    height: 389px;
+    padding-top: 90px;
+    margin-bottom: 40px;
+    background-position: 50% 0;
+  }
+}
+.page-header__title {
+  margin-bottom: 29px;
+
+  &--photo-custom {
+    margin-bottom: 27px; /* ¯\_(ツ)_/¯ */
+  }
+  &--form-custom {
+    margin-bottom: 27px;
+  }
+}
+.page-header__text {
+
+  &--photo-custom {
+    line-height: 24px; /* ¯\_(ツ)_/¯ */
+    margin-bottom: 14px;
+  }
+  &--form-custom {
+    line-height: 24px;
+    margin-bottom: 3px;
+  }
+}
