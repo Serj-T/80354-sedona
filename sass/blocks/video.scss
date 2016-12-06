@@ -1,0 +1,18 @@
+.video {
+  padding-bottom: 113px;
+  border-top: 1px solid #e5e5e5;
+}
+.video__wrap {
+  @include wrap;
+  padding-top: 17px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.video__title {
+  margin-bottom: 27px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.video__text {
+  line-height: 24px;
+}

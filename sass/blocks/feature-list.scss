@@ -1,0 +1,49 @@
+.feature-list__wrap {
+  @include wrap();
+  padding-top: 34px;
+  padding-bottom: 11px;
+}
+.feature__item {
+  position: relative;
+  padding-left: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  &--motel::before {
+    top: -10px;
+    left: 2px;
+    width: 39px;
+    height: 37px;
+    background: url("../../img/icon-house.svg") no-repeat;
+    background-size: 99%;
+  }
+  &--souvenir::before {
+    top: -12px;
+    left: 5px;
+    width: 32px;
+    height: 38px;
+    background: url("../../img/icon-gift.svg") no-repeat;
+    background-size: cover;
+  }
+  &--food::before {
+    top: -6px;
+    left: -1px;
+    width: 40px;
+    height: 35px;
+    background: url("../../img/icon-burger.svg") no-repeat;
+    background-size: 96%;
+  }
+}
+.feature__item strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+.feature__item p {
+  line-height: 21px;
+  margin-bottom: 31px;
+}

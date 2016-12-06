@@ -10,8 +10,10 @@
 <body>
 
 <header class="main-header">
-  <nav class="main-nav  main-nav--closed  main-nav--nojs">
-    <button class="main-nav__btn-close">Закрыть</button>
+  <nav class="main-nav  main-nav--open  main-nav--nojs">
+    <button class="main-nav__btn-close">
+      <img src="img/icon-cross.svg" width="23" height="22" alt="Закрыть">
+    </button>
     <ul class="main-nav__list">
       <li class="main-nav__item"><a class="btn  btn--nav" href="index.html">Главная</a></li>
       <li class="main-nav__item"><a class="btn  btn--nav" href="photo.html">Фото и видео</a></li>
@@ -20,104 +22,109 @@
     </ul>
   </nav>
   <div class="logo">
-    <a href="index.html"><img src="#" alt="Седона лого" width="102" height="83"></a>
+    <a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Седона лого" width="102" height="83"></a>
   </div>
-  <a class="main-nav__btn" href="#">Меню</a>
+  <a class="main-nav__btn" href="#"><img src="img/icon-menu.svg" width="23" height="21" alt="Меню"></a>
 </header>
 
-<header class="page-title  page-title--big">
-  <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-  <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+<header class="page-header">
+  <div class="page-header__background  page-header__background--big">
+    <img src="img/text-sedona-index.svg" width="280" alt="Седона">
+  </div>
+  <div class="page-header__wrap">
+    <h1 class="page-header__title">Седона &ndash; небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h1>
+    <p class="page-header__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+  </div>
 </header>
 
-<div class="page-wrap">
+<!-- <div class="page-wrap"> -->
 
-  <div class="feature">
+  <div class="feature  feature--blue  feature--angle-background">
     <div class="feature__wrap">
-      <h3 class="feature__title">Настоящий городок</h3>
+      <h2 class="feature__title">Настоящий городок</h2>
       <span class="feature__order">&mdash; №1 &mdash;</span>
       <p class="feature__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-      <div class="feature__image">
-        <img src="#" alt="Настоящий городок Седона" width="320" height="260">
-      </div>
+    </div>
+    <div class="feature__image  feature__image--sedona">
     </div>
   </div>
 
   <div class="feature-list">
-    <ul class="feature__wrap">
-      <li class="feature__item">
+    <ul class="feature-list__wrap">
+      <li class="feature__item  feature__item--motel">
         <strong>Жилье</strong>
         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
       </li>
-      <li class="feature__item">
+      <li class="feature__item  feature__item--souvenir">
         <strong>Сувениры</strong>
         <p>Не только китайского, но и местного производства!</p>
       </li>
-      <li class="feature__item">
+      <li class="feature__item  feature__item--food">
         <strong>Еда</strong>
         <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
       </li>
     </ul>
   </div>
 
-  <div class="feature  feature--grey">
-    <div class="feature__wrap">
-      <h3 class="feature__title">Там есть Мост дьявола</h3>
+  <div class="feature  feature--blue">
+    <div class="feature__wrap  feature__wrap--custom">
+      <h2 class="feature__title">Там есть Мост дьявола</h2>
       <span class="feature__order">&mdash; №2 &mdash;</span>
       <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-      <div class="feature__image">
-        <img src="#" alt="Мост дьявола в Седоне" width="320" height="260">
-      </div>
+    </div>
+    <div class="feature__image  feature__image--bridge">
     </div>
   </div>
 
   <div class="feature  feature--grey">
-    <div class="feature__wrap">
-      <h3 class="feature__title">Небольшая площадь</h3>
+    <div class="feature__wrap  feature__wrap--grey">
+      <h2 class="feature__title">Небольшая площадь</h2>
       <span class="feature__order">&mdash; №3 &mdash;</span>
-      <p class="feature__text">Все достопримечательности находятся очень близко</p>
+      <p class="feature__text  feature__text--border">Все достопримечательности находятся очень близко</p>
     </div>
   </div>
 
   <div class="feature  feature--grey">
-    <div class="feature__wrap">
-      <h3 class="feature__title">Красивая дорога</h3>
+    <div class="feature__wrap  feature__wrap--grey">
+      <h2 class="feature__title">Красивая дорога</h2>
       <span class="feature__order">&mdash; №4 &mdash;</span>
-      <p class="feature__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      <p class="feature__text  feature__text--border">Ехать в Седону из Лас-Вегаса совсем&nbsp;не&nbsp;скучно!</p>
     </div>
   </div>
 
   <div class="feature  feature--grey">
-    <div class="feature__wrap">
-      <h3 class="feature__title">Мало туристов</h3>
+    <div class="feature__wrap  feature__wrap--grey">
+      <h2 class="feature__title">Мало туристов</h2>
       <span class="feature__order">&mdash; №5 &mdash;</span>
-      <p class="feature__text">Большинство едет в гранд каньон и толпится там</p>
+      <p class="feature__text">Большинство едет в гранд каньон и&nbsp;толпится там</p>
     </div>
   </div>
 
   <div class="booking">
-    <h2 class="booking__title">Заинтересовались</h2>
+    <h2 class="booking__title">Заинтересовались?</h2>
     <p class="booking__text">Укажите предполагаемые даты поездки,
       и мы покажем вам лучшие предложения гостиниц в седоне</p>
     <a class="btn  btn--book-search" href="#">Найти гостиницу</a>
   </div>
-</div>
+<!-- </div> -->
 
 <div class="map">
-  <img src="#" alt="Карта" width="320" height="350">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d645065.7560344082!2d-111.97539404121386!3d35.01268853373171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1480591073852" width="320" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 <footer class="main-footer">
-  <a class="main-footer__hashtag">#visitsedona</a>
-  <ul class="social">
-    <li class="social__item"><a class="btn  btn--social  btn--twitter" href="">Twitter</a></li>
-    <li class="social__item"><a class="btn  btn--social  btn--facebook" href="">Facebook</a></li>
-    <li class="social__item"><a class="btn  btn--social  btn--youtube" href="">YouTube</a></li>
-  </ul>
-  <a class="main-footer__copyright">
-    Разработано
-  </a>
+  <div class="main-footer__wrap">
+    <h2 class="main-footer__title">#visitsedona</h2>
+    <ul class="social">
+      <li class="social__item"><a class="btn  btn--social  btn--twitter" href="">Twitter</a></li>
+      <li class="social__item"><a class="btn  btn--social  btn--facebook" href="">Facebook</a></li>
+      <li class="social__item"><a class="btn  btn--social  btn--youtube" href="">YouTube</a></li>
+    </ul>
+    <a href="https://htmlacademy.ru/" class="main-footer__copyright">
+      <span>Разработано</span>
+      <img src="/img/logo-htmlacademy.svg" width="27" height="34" alt="Html Academy">
+    </a>
+  </div>
 </footer>
-
 </body>
 </html>

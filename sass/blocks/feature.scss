@@ -1,0 +1,63 @@
+.feature {
+  &--angle-background {
+    padding-top: 16px;
+  }
+  &--blue {
+    background-color: $blue;
+    color: #ffffff;
+  }
+  &--grey {
+    background-color: $grey;
+    color: $text-color;
+  }
+}
+.feature__wrap {
+  @include wrap();
+  padding-top: 24px;
+  padding-bottom: 27px;
+  text-align: center;
+
+  &--grey {
+    padding-top: 12px;
+    padding-bottom: 14px;
+  }
+  &--custom {
+    padding-bottom: 26px; /* ¯\_(ツ)_/¯ */
+  }
+}
+.feature__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+.feature__order {
+  margin-bottom: 7px;
+}
+.feature__text {
+  position: relative;
+  width: 280px;
+  margin-top: 14px;
+  line-height: 21px;
+
+  &--border::after {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+}
+.feature__image {
+  height: 260px;
+
+  &--sedona {
+    background: url("../../img/photo-city@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+  &--bridge {
+    background: url("../../img/bg-bridge-mobile@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,43 @@
+.main-nav {
+  position: relative;
+  @include clearfix();
+  &--open {
+    display: block;
+  }
+  &--close {
+    display: none;
+  }
+}
+.main-nav__item {
+  display: block;
+  a {
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
+                inset 0px -1px 0px 0px rgba(0,0,0,.2);
+  }
+  &:first-child a {
+    box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,.2),
+                inset 0px -1px 0px 0px rgba(0,0,0,.2);
+  }
+  &:last-child a {
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
+                inset 0px -6px 5px -6px rgba(0,0,0,.5);
+  }
+}
+.main-nav__btn-close {
+  @include btn-reset()
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-color: transparent;
+  z-index: 10;
+}
+.main-nav__btn {
+  display: block;
+  float: right;
+  width: 23px;
+  height: 21px;
+  margin-top: 17px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+  font-size: 0;
+}
