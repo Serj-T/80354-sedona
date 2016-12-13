@@ -15,15 +15,15 @@
   background-size: cover;
   background: url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
   @media #{$tablet-width} {
-      height: 290px;
-      margin-bottom: 50px;
-      padding-top: 70px;
-      background: lightgrey;
-    }
-   @media #{$desktop-width} {
-      height: 300px;
-      background: lightgreen;
-    }
+    height: 290px;
+    margin-bottom: 50px;
+    padding-top: 70px;
+    background: lightgrey;
+  }
+  @media #{$desktop-width} {
+    height: 300px;
+    background: lightgreen;
+  }
   &--big {
     height: 389px;
     margin-bottom: 40px;
