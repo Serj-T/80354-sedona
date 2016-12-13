@@ -3,6 +3,17 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: auto;
+
+  @media #{$tablet-width} {
+    width: 640px;
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+  @media #{$desktop-width} {
+    width: 960px;
+    padding-left: 49px;
+    padding-right: 49px;
+  }
 }
 @mixin clearfix() {
   &::after {
@@ -12,11 +23,13 @@
   }
 }
 @mixin btn-reset() {
+  display: block;
   padding: 0;
   border: none;
   outline: none;
+  background-color: transparent;
 }
-@mixin placeholder {
+@mixin placeholder() {
   &::-webkit-input-placeholder {
     @content;
   }
@@ -30,13 +43,14 @@
     @content;
   }
 }
-input,
-textarea {
-    @include placeholder {
-    opacity: 1;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000000;
-    font-weight: bold;
-  }
+@mixin btn() {
+  @include btn-reset()
+  display: block;
+  font-size: 18px;
+  line-height: 56px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  background-color: $blue;
+  overflow: hidden;
 }

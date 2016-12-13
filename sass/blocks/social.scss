@@ -4,6 +4,10 @@
   margin-bottom: 20px;
   padding-top: 17px;
   padding-bottom: 17px;
+  @media #{$tablet-width} {
+    width: 33%;
+    margin-bottom: 0;
+  }
 }
 .social__item {
   margin: 3px;

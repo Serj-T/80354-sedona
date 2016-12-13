@@ -1,9 +1,13 @@
 .video {
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 113px;
-  border-top: 1px solid #e5e5e5;
+  @media #{$only-mobile} {
+    border-top: 1px solid #e5e5e5;
+  }
 }
 .video__wrap {
-  @include wrap;
+  //@include wrap;
   padding-top: 17px;
   padding-bottom: 20px;
   text-align: center;

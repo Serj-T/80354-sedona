@@ -1,43 +1,97 @@
 .main-nav {
   position: relative;
-  @include clearfix();
-  &--open {
-    display: block;
+
+  @media #{$only-mobile} {
+    padding-bottom: 56px;
   }
-  &--close {
+}
+.main-nav--closed .main-nav__item {
+  @media #{$only-mobile} {
     display: none;
   }
 }
+.main-nav__list {
+  @media #{$tablet-width} {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
 .main-nav__item {
-  display: block;
-  a {
+  @media #{$tablet-width} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    min-height: 56px;
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}
+.main-nav__item a {
+
+  @media #{$only-mobile} {
+    @include btn();
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
                 inset 0px -1px 0px 0px rgba(0,0,0,.2);
   }
-  &:first-child a {
+  @media #{$tablet-width} {
+    font-weight: bold;
+    color: #000000;
+  }
+}
+.main-nav__item:first-child a {
+  @media #{$only-mobile} {
     box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,.2),
                 inset 0px -1px 0px 0px rgba(0,0,0,.2);
   }
-  &:last-child a {
+}
+.main-nav__item:last-child a {
+  @media #{$only-mobile} {
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
                 inset 0px -6px 5px -6px rgba(0,0,0,.5);
   }
 }
-.main-nav__btn-close {
-  @include btn-reset()
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  background-color: transparent;
-  z-index: 10;
+.main-nav__btn-open {
+  display: none;
+
+  @media #{$only-mobile} {
+    @include btn-reset()
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    width: 23px;
+    height: 21px;
+    font-size: 0;
+    z-index: 90;
+  }
 }
-.main-nav__btn {
-  display: block;
-  float: right;
-  width: 23px;
-  height: 21px;
-  margin-top: 17px;
-  margin-right: 20px;
-  margin-bottom: 18px;
-  font-size: 0;
+.main-nav__btn-close {
+  display: none;
+}
+.main-nav--opened .main-nav__btn-close {
+  @media #{$only-mobile} {
+    @include btn-reset()
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 23px;
+    height: 22px;
+    z-index: 90;
+  }
+}
+.main-nav--nojs .main-nav__list {
+  @media #{$only-mobile} {
+    display: block;
+  }
+}
+.main-nav--nojs .main-nav__btn-open {
+  @media #{$only-mobile} {
+    display: none;
+  }
 }

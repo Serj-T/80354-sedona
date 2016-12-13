@@ -1,0 +1,14 @@
+.likes {
+  display: flex;
+  align-items: flex-start;
+  @media #{$tablet-width} {
+    min-width: 85px;
+  }
+}
+.likes-icon {
+  margin-right: 10px;
+}
+.likes-count {
+  font-weight: bold;
+  line-height: 24px;
+}

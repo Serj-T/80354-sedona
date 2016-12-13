@@ -1,11 +1,29 @@
+html {
+  height: 100%;
+  background-color: transparent;//#f2f2f2;
+}
 body {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  //flex: auto;
+  min-width: 320px;
+  max-width: 1200px;
+  //min-height: 100%;
+  margin: auto;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   color: $text-color;
   text-transform: uppercase;
+  background-color: white;
+  @media #{$tablet-width} {
+    margin: 0 auto;
+  }
+  @media #{$desktop-width} {
+    box-shadow: 0 0 25px 10px rgba(#000000, .1);
+  }
 }
 h1 {
   font-size: 18px;
@@ -15,6 +33,10 @@ h1 {
 h2 {
   font-size: 21px;
   line-height: 26px;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 ul {
   margin: 0;
@@ -26,6 +48,9 @@ input {
   outline: none;
   background-color: #f2f2f2;
 }
+figure {
+  margin: 0;
+}
 fieldset {
   border: none;
   margin: 0;
@@ -36,7 +61,8 @@ a {
 }
 label,
 button,
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
   cursor: pointer;
 }
 input,

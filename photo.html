@@ -4,27 +4,34 @@
   <meta charset="UTF-8">
   <meta name="description" content="Sedona">
   <meta name="keywords" content="Sedona, гостиница, отель, фото">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Sedona фото</title>
 </head>
 <body>
 
 <header class="main-header">
-  <nav class="main-nav  main-nav--open  main-nav--nojs">
+
+  <nav class="main-nav  main-nav--closed  main-nav--nojs">
     <button class="main-nav__btn-close">
       <img src="img/icon-cross.svg" width="23" height="22" alt="Закрыть">
     </button>
     <ul class="main-nav__list">
-      <li class="main-nav__item"><a class="btn  btn--nav" href="index.html">Главная</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="photo.html">Фото и видео</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="form.html">Форма отзыва</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="https://htmlacademy.ru/">Html academy</a></li>
+      <li class="main-nav__item"><a href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
+      <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+      <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html academy</a></li>
     </ul>
+    <button class="main-nav__btn-open">
+      <img src="img/icon-menu.svg" width="23" height="21" alt="Открыть меню">
+    </button>
   </nav>
+
   <div class="logo">
-    <a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Седона лого" width="102" height="83"></a>
+    <a href="index.html">
+      <img src="img/logo-sedona-mobile.svg" alt="Седона лого" width="102" height="83">
+    </a>
   </div>
-  <a class="main-nav__btn" href="#"><img src="img/icon-menu.svg" width="23" height="21" alt="Меню"></a>
 </header>
 
 <header class="page-header">
@@ -37,71 +44,79 @@
   </div>
 </header>
 
-<!-- <div class="page-wrap"> -->
+<main class="page-wrap page-wrap--photo-page">
 
-  <article class="photo">
-    <div class="photo__wrap">
-      <div class="photo__img">
-        <img src="img/photo-1-mobile@1x.jpg" alt="Седона. Неродные просторы" width="280" height="280">
+  <figure class="photo">
+    <a href="#">
+      <div class="photo__img-wrap  photo__img-wrap--first">
+        <img  class="photo__img  photo__img--first" src="img/photo-1-mobile@1x.jpg" alt="Седона. Неродные просторы">
       </div>
-      <div class="photo__info">
+    </a>
+    <figcaption class="photo__info">
+      <div class="photo__info-wrap">
         <h3 class="photo__title">Неродные просторы</h3>
         <span class="photo__author">Автор фото: Борис</span>
-        <div class="photo__likes">
-          <img src="img/icon-like.svg" alt="Лайк">
-          <span>1350</span>
-        </div>
       </div>
-    </div>
-  </article>
+      <div class="likes">
+        <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
+        <span class="likes-count">1350</span>
+      </div>
+    </figcaption>
+  </figure>
 
-  <article class="photo">
-    <div class="photo__wrap">
-      <div class="photo__img">
-        <img src="img/photo-2-mobile@1x.jpg" alt="Седона. Местная растительность" width="280" height="280">
+  <figure class="photo">
+    <a href="#">
+      <div class="photo__img-wrap">
+        <img class="photo__img" src="img/photo-2-mobile@1x.jpg" alt="Седона. Местная растительность">
       </div>
-      <div class="photo__info">
+    </a>
+    <figcaption class="photo__info">
+      <div class="photo__info-wrap">
         <h3 class="photo__title">Местная растительность</h3>
         <span class="photo__author">Автор фото: Сергей</span>
-        <div class="photo__likes">
-          <img src="img/icon-like.svg" alt="Лайк">
-          <span>143</span>
-        </div>
       </div>
-    </div>
-  </article>
+      <div class="likes">
+        <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
+        <span class="likes-count">143</span>
+      </div>
+    </figcaption>
+  </figure>
 
-  <article class="photo">
-    <div class="photo__wrap">
-      <div class="photo__img">
-        <img src="img/photo-3-mobile@1x.jpg" alt="Седона. Дорога на север" width="280" height="280">
+  <figure class="photo">
+    <a href="#">
+      <div class="photo__img-wrap">
+        <img class="photo__img" src="img/photo-3-mobile@1x.jpg" alt="Седона. Дорога на север">
       </div>
-      <div class="photo__info">
+    </a>
+    <figcaption class="photo__info">
+      <div class="photo__info-wrap">
         <h3 class="photo__title">Дорога на север</h3>
         <span class="photo__author">Автор фото: Петр</span>
-        <div class="photo__likes">
-          <img src="img/icon-like.svg" alt="Лайк">
-          <span>96</span>
-        </div>
       </div>
-    </div>
-  </article>
+      <div class="likes">
+        <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
+        <span class="likes-count">96</span>
+      </div>
+    </figcaption>
+  </figure>
 
-  <article class="photo">
-    <div class="photo__wrap">
-      <div class="photo__img">
-        <img src="img/photo-4-mobile@1x.jpg" alt="Седона. Мост дьявола" width="280" height="280">
+  <figure class="photo">
+    <a href="#">
+      <div class="photo__img-wrap">
+        <img class="photo__img" src="img/photo-4-mobile@1x.jpg" alt="Седона. Мост дьявола">
       </div>
-      <div class="photo__info">
+    </a>
+    <figcaption class="photo__info">
+      <div class="photo__info-wrap">
         <h3 class="photo__title">Мост дьявола</h3>
         <span class="photo__author">Автор фото: Антон</span>
-        <div class="photo__likes">
-          <img src="img/icon-like.svg" alt="Лайк">
-          <span>254</span>
-        </div>
       </div>
-    </div>
-  </article>
+      <div class="likes">
+        <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
+        <span class="likes-count">254</span>
+      </div>
+    </figcaption>
+  </figure>
 
   <div class="video">
     <div class="video__wrap">
@@ -118,17 +133,16 @@
             </div>
           </div>
           <div class="video-player_control">
-            <input type="button" name="" class="video-player__btn  video-player__btn--replay">
-            <input type="button" name="" class="video-player__btn  video-player__btn--subs">
-            <input type="button" name="" class="video-player__btn  video-player__btn--full">
+            <input type="button" name="replay" class="video-player__btn  video-player__btn--replay" value="replay">
+            <input type="button" name="subs" class="video-player__btn  video-player__btn--subs" value="subs">
+            <input type="button" name="fullscreen" class="video-player__btn  video-player__btn--full" value="fullscreen">
           </div>
         </div>
       </div>
     </div>
 
-
   </div>
-<!-- </div> -->
+</main>
 
 <footer class="main-footer">
   <div class="main-footer__wrap">
@@ -145,5 +159,6 @@
   </div>
 </footer>
 
+<script src="js/menu.js"></script>
 </body>
 </html>
