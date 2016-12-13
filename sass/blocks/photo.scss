@@ -11,7 +11,7 @@
   }
   &:first-of-type{
     @media #{$tablet-width} {
-     width: 100%;
+      width: 100%;
     }
   }
   @media #{$desktop-width} {
