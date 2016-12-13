@@ -9,3 +9,4 @@ psd/
 css/*.css
 node_modules/
 Thumbs.db
+*npm-debug.log.*

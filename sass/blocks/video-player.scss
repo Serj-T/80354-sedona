@@ -1,16 +1,32 @@
 .video-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 320px;
   height: 201px;
-  background: url("../../img/video-mobile@1x.jpg") no-repeat;
+  margin: auto;
+  @media #{$tablet-width} {
+    width: 640px;
+    height: 499px;
+  }
 }
 .video-player__wrap {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   min-height: 267px;
+  background: url("../../img/video-mobile@1x.jpg") no-repeat;
+  @media #{$tablet-width} {
+    height: 499px;
+  }
 }
 .video-player__panel {
-  @include wrap();
+  //@include wrap();
   position: absolute;
   bottom: 0;
+  width: 100%;
   z-index: 10;
 }
 .video-player__bar {
@@ -45,6 +61,7 @@
   padding-right: 23px;
   padding-left: 25px;
   padding-bottom: 23px;
+  font-size: 0;
 }
 .video-player__btn {
   @include btn-reset();

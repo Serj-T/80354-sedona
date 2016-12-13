@@ -1,13 +1,27 @@
 .main-footer {
 }
 .main-footer__wrap {
-  @include wrap();
+  //@include wrap();
+  display: flex;
+  flex-direction: column;
   padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
+  @media #{$tablet-width} {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.main-footer__title {
+  @media #{$tablet-width} {
+    width: 33%;
+  }
 }
 .main-footer__copyright {
   color: #000000;
+  @media #{$tablet-width} {
+    width: 33%;
+  }
 }
 .main-footer__copyright img,
 .main-footer__copyright span {

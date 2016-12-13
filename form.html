@@ -4,27 +4,34 @@
   <meta charset="UTF-8">
   <meta name="description" content="Sedona">
   <meta name="keywords" content="Sedona, гостиница, отель, форма">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>Sedona форма</title>
 </head>
 <body>
 
 <header class="main-header">
-  <nav class="main-nav  main-nav--open  main-nav--nojs">
+
+  <nav class="main-nav  main-nav--closed  main-nav--nojs">
     <button class="main-nav__btn-close">
       <img src="img/icon-cross.svg" width="23" height="22" alt="Закрыть">
     </button>
     <ul class="main-nav__list">
-      <li class="main-nav__item"><a class="btn  btn--nav" href="index.html">Главная</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="photo.html">Фото и видео</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="form.html">Форма отзыва</a></li>
-      <li class="main-nav__item"><a class="btn  btn--nav" href="https://htmlacademy.ru/">Html academy</a></li>
+      <li class="main-nav__item"><a href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
+      <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+      <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html academy</a></li>
     </ul>
+    <button class="main-nav__btn-open">
+      <img src="img/icon-menu.svg" width="23" height="21" alt="Открыть меню">
+    </button>
   </nav>
+
   <div class="logo">
-    <a href="index.html"><img src="img/logo-sedona-mobile.svg" alt="Седона лого" width="102" height="83"></a>
+    <a href="index.html">
+      <img src="img/logo-sedona-mobile.svg" alt="Седона лого" width="102" height="83">
+    </a>
   </div>
-  <a class="main-nav__btn" href="#"><img src="img/icon-menu.svg" width="23" height="21" alt="Меню"></a>
 </header>
 
 <header class="page-header">
@@ -41,7 +48,7 @@
 
 <form action="https://echo.htmlacademy.ru">
 
-  <fieldset class="form">
+  <fieldset class="form  form--name">
     <div class="form__wrap">
       <h2 class="form__title">Представьтесь:</h2>
       <div class="form__field">
@@ -59,25 +66,27 @@
     </div>
   </fieldset>
 
-  <fieldset class="form">
+  <fieldset class="form  form--contact">
     <div class="form__wrap">
       <h2 class="form__title">Контактная информация:</h2>
       <div class="form__field  form__field--contact">
         <label class="form__contact-label" for="contact-tel">Контактный телефон*:</label>
-        <input class="form__contact-input" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон" required>
-        <label class="form__contact-icon  form__contact-icon--tel" for="contact-tel"></label>
+        <div class="form__field-wrap">
+          <input class="form__contact-input" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон" required>
+          <label class="form__contact-icon  form__contact-icon--tel" for="contact-tel"></label>
+        </div>
         <span class="form__error-tel  form__error-tel--on">Ошибка, перепроверьте номер</span>
       </div>
       <div class="form__field  form__field--contact">
         <label class="form__contact-label" for="contact-mail">Электронная почта*:</label>
-        <input class="form__contact-input" id="contact-mail" type="mail" name="mail" placeholder="Введите e-mail" required>
+        <input class="form__contact-input" id="contact-mail" type="email" name="mail" placeholder="Введите e-mail" required>
         <label class="form__contact-icon  form__contact-icon--mail" for="contact-mail"></label>
         <span class="form__error-mail  form__error-mail--off">Ошибка, перепроверьте e-mail</span>
       </div>
     </div>
   </fieldset>
 
-  <fieldset class="form">
+  <fieldset class="form  form--quiz">
     <div class="form__wrap  form__wrap--quiz">
       <h2 class="form__title">Ваше общее впечатление:</h2>
       <div class="form__field  form__field--quiz">
@@ -95,8 +104,8 @@
     </div>
   </fieldset>
 
-  <fieldset class="form">
-    <div class="form__wrap">
+  <fieldset class="form  form--visit">
+    <div class="form__wrap  form__wrap--visit">
       <h2 class="form__title  form__title--visit-custom">Посещенные достопримечательности:</h2>
       <div class="form__field  form__field--visit">
         <input class="form__visit-input" id="bridge" type="checkbox" name="checkbox" value="bridge">
@@ -117,7 +126,7 @@
     </div>
   </fieldset>
 
-  <fieldset class="form">
+  <fieldset class="form  form--review">
     <div class="form__wrap">
       <h2 class="form__title">Опишите свои эмоции:</h2>
       <div class="form__field  form__field--review">
@@ -163,5 +172,6 @@
   </div>
 </footer>
 
+<script src="js/menu.js"></script>
 </body>
 </html>

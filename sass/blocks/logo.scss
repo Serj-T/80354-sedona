@@ -3,5 +3,12 @@
   left: 50%;
   width: 102px;
   margin-left: -51px;
-  z-index: 10;
+  z-index: 90;
+
+  @media #{$only-mobile} {
+    bottom: -36px;
+  }
+  @media #{$tablet-width} {
+    top: 0px;
+  }
 }
