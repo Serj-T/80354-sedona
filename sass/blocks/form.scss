@@ -46,7 +46,7 @@ form {
   padding-top: 3px;
   padding-bottom: 5px;
   &--quiz {
-    padding-bottom: 18px;
+    //padding-bottom: 18px;
   }
   &--visit {
     @media #{$tablet-width} {
@@ -56,6 +56,34 @@ form {
     }
     @media #{$desktop-width} {
       justify-content: space-between;
+    }
+  }
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &--contact {
+    @media #{$desktop-width} {
+      flex-direction: row;
+    }
+  }
+  &--quiz {
+    @media #{$tablet-width} {
+      align-items: flex-start;
+    }
+  }
+  &--visit {
+    @media #{$tablet-width} {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 0;
+      padding-left: 95px;
+    }
+    @media #{$desktop-width} {
+      padding: 0;
     }
   }
 }
@@ -88,28 +116,12 @@ form {
     @media #{$tablet-width} {
       justify-content: space-between;
     }
+    @media #{$desktop-width} {
+      width: 50%;
+    }
   }
   &--review {
     flex-wrap: wrap;
-  }
-  &--quiz {
-    margin-bottom: 13px;
-  }
-  &--visit {
-    margin-bottom: 24px;
-    @media #{$tablet-width} {
-      width: 35%;
-      //margin-right: 13%;
-      &:nth-child(2n) {
-        margin-left: 13%;
-      }
-    }
-    @media #{$desktop-width} {
-      width: auto;
-      &:nth-child(2n) {
-        margin-left: 0;
-      }
-    }
   }
 }
 .form__name-label {
@@ -126,6 +138,10 @@ form {
 .form__field-wrap {
   position: relative;
   width: 100%;
+  @media #{$desktop-width} {
+    width: 50%;
+    flex-grow: 1;
+  }
 }
 .form__contact-input {
   box-sizing: border-box;
@@ -146,7 +162,6 @@ form {
   bottom: 0;
   width: 58px;
   height: 58px;
-
   &--tel {
     background: url("../../img/icon-phone.svg") no-repeat 50% 50%;
     background-color: #e6e6e6;
@@ -169,11 +184,17 @@ form {
   @media #{$tablet-width} {
     order: -1;
   }
+  @media #{$desktop-width} {
+    position: absolute;
+    top: -30px;
+    left: 30%;
+    // order: -12;
+    // width: 100%;
+  }
 }
 
 @mixin radiocheck-style() {
   position: relative;
-  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 78px;
@@ -182,10 +203,9 @@ form {
   color: #000000;
   text-transform: none;
 }
-
 .form__quiz-label {
   position: relative;
-  width: 100%;
+  margin-bottom: 13px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 78px;
@@ -218,10 +238,9 @@ form {
     background-color: #333333;
   }
 }
-
 .form__visit-label {
   @include radiocheck-style();
-
+  margin-bottom: 24px;
   &::before {
     content: "";
     position: absolute;
@@ -231,6 +250,13 @@ form {
     height: 56px;
     border-radius: 4px;
     background-color: #f2f2f2;
+  }
+  @media #{$tablet-width} {
+    box-sizing: border-box;
+    width: 50%;
+  }
+  @media #{$desktop-width} {
+    width: auto;
   }
 }
 .form__visit-input:checked + .form__visit-label {
@@ -255,9 +281,34 @@ form {
   background-color: #f2f2f2;
 }
 .form__btn {
-  @include wrap;
+  //@include wrap;
+  width: 100%;
   margin-top: 25px;
   margin-bottom: 45px;
   line-height: 58px;
   text-transform: uppercase;
+  @media #{$tablet-width} {
+    margin: 0;
+    width: 50%;
+  }
+}
+.form__warn {
+  @media #{$only-mobile} {
+    display: none;  /* поменять на вижуали хидден */
+  }
+  @media #{$tablet-width} {
+    margin-left: auto;
+    align-self: center;
+  }
+}
+/* Очередность */
+label[for="park"] {
+  @media #{$tablet-width} {
+    order: 1;
+  }
+}
+label[for="red-rocks"] {
+  @media #{$tablet-width} {
+    order: 2;
+  }
 }

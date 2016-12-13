@@ -51,17 +51,19 @@
   <fieldset class="form  form--name">
     <div class="form__wrap">
       <h2 class="form__title">Представьтесь:</h2>
-      <div class="form__field">
-        <label class="form__name-label" for="name1">Имя*:</label>
-        <input class="form__name-input" id="name1" type="text" name="name1" placeholder="Петр" required>
-      </div>
-      <div class="form__field">
-        <label class="form__name-label" for="name2">Фамилия*:</label>
-        <input class="form__name-input" id="name2"  type="text" name="name2" placeholder="Иванов" required>
-      </div>
-      <div class="form__field">
-        <label class="form__name-label  form__name-label--custom" for="name3">Отчество:</label>
-        <input class="form__name-input" id="name3" type="text" name="name3" placeholder="Александрович">
+      <div class="form__group  form__group--name">
+        <div class="form__field">
+          <label class="form__name-label" for="name1">Имя*:</label>
+          <input class="form__name-input" id="name1" type="text" name="name1" placeholder="Петр" required>
+        </div>
+        <div class="form__field">
+          <label class="form__name-label" for="name2">Фамилия*:</label>
+          <input class="form__name-input" id="name2"  type="text" name="name2" placeholder="Иванов" required>
+        </div>
+        <div class="form__field">
+          <label class="form__name-label  form__name-label--custom" for="name3">Отчество:</label>
+          <input class="form__name-input" id="name3" type="text" name="name3" placeholder="Александрович">
+        </div>
       </div>
     </div>
   </fieldset>
@@ -69,19 +71,23 @@
   <fieldset class="form  form--contact">
     <div class="form__wrap">
       <h2 class="form__title">Контактная информация:</h2>
-      <div class="form__field  form__field--contact">
-        <label class="form__contact-label" for="contact-tel">Контактный телефон*:</label>
-        <div class="form__field-wrap">
-          <input class="form__contact-input" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон" required>
-          <label class="form__contact-icon  form__contact-icon--tel" for="contact-tel"></label>
+      <div class="form__group  form__group--contact">
+        <div class="form__field  form__field--contact">
+          <label class="form__contact-label" for="contact-tel">Контактный телефон*:</label>
+          <div class="form__field-wrap">
+            <input class="form__contact-input" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон" required>
+            <label class="form__contact-icon  form__contact-icon--tel" for="contact-tel"></label>
+          </div>
+          <span class="form__error-tel  form__error-tel--on">Ошибка, перепроверьте номер</span>
         </div>
-        <span class="form__error-tel  form__error-tel--on">Ошибка, перепроверьте номер</span>
-      </div>
-      <div class="form__field  form__field--contact">
-        <label class="form__contact-label" for="contact-mail">Электронная почта*:</label>
-        <input class="form__contact-input" id="contact-mail" type="email" name="mail" placeholder="Введите e-mail" required>
-        <label class="form__contact-icon  form__contact-icon--mail" for="contact-mail"></label>
-        <span class="form__error-mail  form__error-mail--off">Ошибка, перепроверьте e-mail</span>
+        <div class="form__field  form__field--contact">
+          <label class="form__contact-label" for="contact-mail">Электронная почта*:</label>
+          <div class="form__field-wrap">
+            <input class="form__contact-input" id="contact-mail" type="email" name="mail" placeholder="Введите e-mail" required>
+            <label class="form__contact-icon  form__contact-icon--mail" for="contact-mail"></label>
+          </div>
+          <span class="form__error-mail  form__error-mail--off">Ошибка, перепроверьте e-mail</span>
+        </div>
       </div>
     </div>
   </fieldset>
@@ -89,39 +95,43 @@
   <fieldset class="form  form--quiz">
     <div class="form__wrap  form__wrap--quiz">
       <h2 class="form__title">Ваше общее впечатление:</h2>
-      <div class="form__field  form__field--quiz">
-        <input class="form__quiz-input" id="quiz-good" type="radio" name="radio" value="good">
-        <label class="form__quiz-label" for="quiz-good">Скорее положительное</label>
-      </div>
-      <div class="form__field  form__field--quiz">
-        <input class="form__quiz-input" id="quiz-bad" type="radio" name="radio" value="bad">
-        <label class="form__quiz-label" for="quiz-bad">Скорее отрицательное</label>
-      </div>
-      <div class="form__field  form__field--quiz">
-        <input class="form__quiz-input" id="quiz-unknown" type="radio" name="radio" value="unknown">
-        <label class="form__quiz-label" for="quiz-unknown">Затрудняюсь ответить</label>
+      <div class="form__group  form__group--quiz">
+        <!-- <div class="form__field  form__field--quiz"> -->
+          <input class="form__quiz-input" id="quiz-good" type="radio" name="radio" value="good">
+          <label class="form__quiz-label" for="quiz-good">Скорее положительное</label>
+        <!-- </div> -->
+        <!-- <div class="form__field  form__field--quiz"> -->
+          <input class="form__quiz-input" id="quiz-bad" type="radio" name="radio" value="bad">
+          <label class="form__quiz-label" for="quiz-bad">Скорее отрицательное</label>
+        <!-- </div> -->
+        <!-- <div class="form__field  form__field--quiz"> -->
+          <input class="form__quiz-input" id="quiz-unknown" type="radio" name="radio" value="unknown">
+          <label class="form__quiz-label" for="quiz-unknown">Затрудняюсь ответить</label>
+        <!-- </div> -->
       </div>
     </div>
   </fieldset>
 
   <fieldset class="form  form--visit">
     <div class="form__wrap  form__wrap--visit">
-      <h2 class="form__title  form__title--visit-custom">Посещенные достопримечательности:</h2>
-      <div class="form__field  form__field--visit">
+      <h2 class="form__title  form__title--visit-custom">Посещенные<br>достопримечательности:</h2>
+      <div class="form__group  form__group--visit">
+      <!-- <div class="form__field  form__field--visit"> -->
         <input class="form__visit-input" id="bridge" type="checkbox" name="checkbox" value="bridge">
         <label class="form__visit-label" for="bridge">Мост Дьявола</label>
-      </div>
-      <div class="form__field  form__field--visit">
+      <!-- </div> -->
+      <!-- <div class="form__field  form__field--visit"> -->
         <input class="form__visit-input" id="park" type="checkbox" name="checkbox" value="park">
         <label class="form__visit-label" for="park">Слайд-парк</label>
-      </div>
-      <div class="form__field  form__field--visit">
+      <!-- </div> -->
+      <!-- <div class="form__field  form__field--visit"> -->
         <input class="form__visit-input" id="mountain" type="checkbox" name="checkbox" value="mountain">
         <label class="form__visit-label" for="mountain">Гора-Колокол</label>
-      </div>
-      <div class="form__field  form__field--visit">
+      <!-- </div> -->
+      <!-- <div class="form__field  form__field--visit"> -->
         <input class="form__visit-input" id="red-rocks" type="checkbox" name="checkbox" value="red-rocks">
         <label class="form__visit-label" for="red-rocks">Красные скалы</label>
+      <!-- </div> -->
       </div>
     </div>
   </fieldset>
@@ -136,6 +146,8 @@
   </fieldset>
 
   <input class="btn  form__btn" type="submit" value="Отправить отзыв">
+
+  <span class="form__warn">* — обязательные поля</span>
 
 </form>
 
