@@ -1,9 +1,33 @@
 .page-header {
   position: relative;
-  padding-bottom: 14px;
+  @media #{$tablet-width} {
+    margin-bottom: 37px;
+  }
+  &--index {
+    @media #{$only-mobile} {
+      margin-bottom: 25px;
+    }
+    @media #{$tablet-width} {
+      margin-bottom: 50px;//12px;
+    }
+  }
+  &--photo {
+    margin-bottom: 27px;
+    @media #{$tablet-width} {
+      margin-bottom: 69px;
+    }
+  }
+  &--form {
+    margin-bottom: 17px;
+    @media #{$tablet-width} {
+      margin-bottom: 57px;
+    }
+    @media #{$desktop-width} {
+      margin-bottom: 38px;
+    }
+  }
 }
 .page-header__wrap {
-  //@include wrap();
   text-align: center;
 }
 .page-header__background {
@@ -16,17 +40,17 @@
   background: url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
   @media #{$tablet-width} {
     height: 290px;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     padding-top: 70px;
     background: lightgrey;
   }
   @media #{$desktop-width} {
     height: 300px;
+    margin-bottom: 115px;
     background: lightgreen;
   }
   &--big {
     height: 389px;
-    margin-bottom: 40px;
     padding-top: 90px;
     background-position: 50% 0;
     @media #{$tablet-width} {
@@ -42,31 +66,52 @@
   }
 }
 .page-header__title {
-  margin-bottom: 29px;
-  &--photo-custom {
-    margin-bottom: 27px; /* ¯\_(ツ)_/¯ */
-  }
-  &--form-custom {
-    margin-bottom: 27px;
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  @media #{$only-mobile} {
+    margin-bottom: 25px;
+    padding: 0 25px;
   }
   @media #{$tablet-width} {
-    width: 440px;
-    margin: 0 auto;
-    margin-bottom: 29px;
-    font-size: 21px;
+    //margin-top: 74px;
+    margin-bottom: 31px;
+    font-size: 30px;
+  }
+  &--index {
+    margin-bottom: 28px;
+    @media #{$tablet-width} {
+      margin-bottom: 29px;
+      font-size: 21px;
+    }
+  }
+  &--photo-custom {
+    @media #{$desktop-width} {
+      //margin-top: 115px;
+    }
+  }
+  &--form-custom {
+    @media #{$desktop-width} {
+      margin-top: 113px;
+    }
   }
 }
 .page-header__text {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$only-mobile} {
+    padding: 0 25px;
+  }
+  &--index {
+    max-width: 490px;
+  }
   &--photo-custom {
-    line-height: 24px; /* ¯\_(ツ)_/¯ */
+    line-height: 24px;
     margin-bottom: 14px;
   }
   &--form-custom {
+    padding: 0 20px;
     line-height: 24px;
-    margin-bottom: 3px;
-  }
-  @media #{$tablet-width} {
-    width: 450px;
-    margin: 0 auto;
   }
 }

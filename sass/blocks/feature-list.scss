@@ -1,34 +1,42 @@
 .feature-list__wrap {
-  //@include wrap();
-  padding-top: 34px;
-  padding-bottom: 11px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  align-items: flex-start;
+  padding-top: 34px;
+  padding-right: 20px;
+  padding-bottom: 11px;
+  padding-left: 20px;
   @media #{$tablet-width} {
     flex-direction: row;
-    padding-top: 60px;
-    text-align: center;
+    padding: 0;
+  }
+  @media #{$desktop-width} {
+    padding-bottom: 26px;
   }
 }
 .feature-list__item {
   position: relative;
-  width: 80%;
-  padding-left: 50px;
   display: flex;
   flex-direction: column;
-
-  @media #{$tablet-width} {
-    flex-direction: column;
-    text-align: center;
-    width: 33%;
-    padding-left: 0;
-    padding-top: 50px;
-  }
+  margin-bottom: 14px;
+  padding-left: 50px;
   &::before {
     content: "";
     position: absolute;
+  }
+  @media #{$tablet-width} {
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 33.33%;
+    margin-bottom: 0;
+    padding-top: 158px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    text-align: center;
+    &--souvenir {
+      order: 1;
+    }
   }
   &--motel::before {
     top: -10px;
@@ -36,11 +44,13 @@
     width: 39px;
     height: 37px;
     background: url("../../img/icon-house.svg") no-repeat;
-    background-size: 99%;
+    background-size: cover;
     @media #{$tablet-width} {
-      top: 0px;
+      top: 58px;
       left: 50%;
-      margin-left: -16px;
+      width: 75px;
+      height: 72px;
+      margin-left: -38px;
     }
   }
   &--souvenir::before {
@@ -51,9 +61,12 @@
     background: url("../../img/icon-gift.svg") no-repeat;
     background-size: cover;
     @media #{$tablet-width} {
-      top: 0px;
+      top: 55px;
       left: 50%;
-      margin-left: -16px;
+      width: 64px;
+      height: 76px;
+      margin-left: -34px;
+      background-size: 100%;
     }
   }
   &--food::before {
@@ -64,20 +77,25 @@
     background: url("../../img/icon-burger.svg") no-repeat;
     background-size: 96%;
     @media #{$tablet-width} {
-      top: 0px;
+      top: 63px;
       left: 50%;
-      margin-left: -16px;
+      width: 75px;
+      height: 72px;
+      margin-left: -38px;
+      background-size: 100%;
     }
   }
 }
 .feature-list__title {
   display: block;
-  margin-bottom: 14px;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+  @media #{$tablet-width} {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
 }
 .feature-list__text {
   line-height: 21px;
-  margin-bottom: 31px;
 }

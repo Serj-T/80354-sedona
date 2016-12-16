@@ -22,7 +22,7 @@
     clear: both;
   }
 }
-// фиксирует окно + резина разтягивает. custom-width - размер попапа
+// фиксирует окно + резина раcтягивает. custom-width - размер попапа
 @mixin modal-fix($modal-width) {
   display: block;
   position: fixed;
@@ -59,14 +59,58 @@
     @content;
   }
 }
+@mixin radiocheck-style() {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 78px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: none;
+}
 @mixin btn() {
   @include btn-reset()
   display: block;
   font-size: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 56px;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
   background-color: $blue;
   overflow: hidden;
+}
+// Граница в заголовке формы
+@mixin form-border() {
+  position: relative;
+  text-align: center;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 19%;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 19%;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+  @media #{$desktop-width} {
+    &::after {
+      width: 29%;
+    }
+    &::before {
+      width: 29%;
+    }
+  }
 }
