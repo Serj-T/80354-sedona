@@ -1,6 +1,5 @@
 .main-nav {
   position: relative;
-
   @media #{$only-mobile} {
     padding-bottom: 56px;
   }
@@ -24,7 +23,6 @@
     align-items: center;
     width: 20%;
     min-height: 56px;
-
     &:nth-child(2) {
       margin-right: auto;
     }
@@ -34,7 +32,6 @@
   }
 }
 .main-nav__item a {
-
   @media #{$only-mobile} {
     @include btn();
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
@@ -59,7 +56,6 @@
 }
 .main-nav__btn-open {
   display: none;
-
   @media #{$only-mobile} {
     @include btn-reset()
     position: absolute;
@@ -78,10 +74,10 @@
   @media #{$only-mobile} {
     @include btn-reset()
     position: absolute;
-    top: 17px;
-    right: 20px;
-    width: 23px;
-    height: 22px;
+    top: 0px;
+    right: 0px;
+    width: 56px;
+    height: 56px;
     z-index: 90;
   }
 }

@@ -34,7 +34,7 @@
   </div>
 </header>
 
-<header class="page-header">
+<header class="page-header  page-header--form">
   <div class="page-header__background">
     <img src="img/text-sedona.svg" width="228" alt="Седона">
   </div>
@@ -44,13 +44,11 @@
   </div>
 </header>
 
-<!-- <div class="page-wrap"> -->
-
-<form action="https://echo.htmlacademy.ru">
+<form action="https://echo.htmlacademy.ru" class="page-wrap  page-wrap--form">
 
   <fieldset class="form  form--name">
     <div class="form__wrap">
-      <h2 class="form__title">Представьтесь:</h2>
+      <h2 class="form__title  form__title--name">Представьтесь:</h2>
       <div class="form__group  form__group--name">
         <div class="form__field">
           <label class="form__name-label" for="name1">Имя*:</label>
@@ -69,11 +67,13 @@
   </fieldset>
 
   <fieldset class="form  form--contact">
-    <div class="form__wrap">
-      <h2 class="form__title">Контактная информация:</h2>
+    <div class="form__wrap  form__wrap--contact">
+      <h2 class="form__title  form__title--contact">Контактная информация:</h2>
       <div class="form__group  form__group--contact">
-        <div class="form__field  form__field--contact">
-          <label class="form__contact-label" for="contact-tel">Контактный телефон*:</label>
+        <div class="form__field  form__field--contact  form__field--contact-custom">
+          <label class="form__contact-label" for="contact-tel">
+            <span class="form__hidden">Контактный</span> телефон*:
+          </label>
           <div class="form__field-wrap">
             <input class="form__contact-input" id="contact-tel" type="tel" name="tel" placeholder="Введите телефон" required>
             <label class="form__contact-icon  form__contact-icon--tel" for="contact-tel"></label>
@@ -94,66 +94,51 @@
 
   <fieldset class="form  form--quiz">
     <div class="form__wrap  form__wrap--quiz">
-      <h2 class="form__title">Ваше общее впечатление:</h2>
+      <h2 class="form__title  form__title--quiz">Ваше общее впечатление:</h2>
       <div class="form__group  form__group--quiz">
-        <!-- <div class="form__field  form__field--quiz"> -->
-          <input class="form__quiz-input" id="quiz-good" type="radio" name="radio" value="good">
+          <input class="form__quiz-input" id="quiz-good" type="radio" name="radio" value="good" checked>
           <label class="form__quiz-label" for="quiz-good">Скорее положительное</label>
-        <!-- </div> -->
-        <!-- <div class="form__field  form__field--quiz"> -->
           <input class="form__quiz-input" id="quiz-bad" type="radio" name="radio" value="bad">
           <label class="form__quiz-label" for="quiz-bad">Скорее отрицательное</label>
-        <!-- </div> -->
-        <!-- <div class="form__field  form__field--quiz"> -->
           <input class="form__quiz-input" id="quiz-unknown" type="radio" name="radio" value="unknown">
           <label class="form__quiz-label" for="quiz-unknown">Затрудняюсь ответить</label>
-        <!-- </div> -->
       </div>
     </div>
   </fieldset>
 
   <fieldset class="form  form--visit">
     <div class="form__wrap  form__wrap--visit">
-      <h2 class="form__title  form__title--visit-custom">Посещенные<br>достопримечательности:</h2>
+      <h2 class="form__title  form__title--visit">Посещенные<br>достопримечательности:</h2>
       <div class="form__group  form__group--visit">
-      <!-- <div class="form__field  form__field--visit"> -->
-        <input class="form__visit-input" id="bridge" type="checkbox" name="checkbox" value="bridge">
+        <input class="form__visit-input" id="bridge" type="checkbox" name="checkbox" value="bridge" checked>
         <label class="form__visit-label" for="bridge">Мост Дьявола</label>
-      <!-- </div> -->
-      <!-- <div class="form__field  form__field--visit"> -->
-        <input class="form__visit-input" id="park" type="checkbox" name="checkbox" value="park">
+        <input class="form__visit-input" id="park" type="checkbox" name="checkbox" value="park" checked>
         <label class="form__visit-label" for="park">Слайд-парк</label>
-      <!-- </div> -->
-      <!-- <div class="form__field  form__field--visit"> -->
         <input class="form__visit-input" id="mountain" type="checkbox" name="checkbox" value="mountain">
         <label class="form__visit-label" for="mountain">Гора-Колокол</label>
-      <!-- </div> -->
-      <!-- <div class="form__field  form__field--visit"> -->
-        <input class="form__visit-input" id="red-rocks" type="checkbox" name="checkbox" value="red-rocks">
+        <input class="form__visit-input" id="red-rocks" type="checkbox" name="checkbox" value="red-rocks" checked>
         <label class="form__visit-label" for="red-rocks">Красные скалы</label>
-      <!-- </div> -->
       </div>
     </div>
   </fieldset>
 
   <fieldset class="form  form--review">
-    <div class="form__wrap">
-      <h2 class="form__title">Опишите свои эмоции:</h2>
+    <div class="form__wrap  form__wrap--review">
+      <h2 class="form__title  form__title--review">Опишите свои эмоции:</h2>
       <div class="form__field  form__field--review">
-        <textarea class="form__textarea" name="review" cols="30" rows="8" placeholder="Опишите подробно все свои восторги"></textarea>
+        <textarea class="form__textarea" name="review" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
       </div>
     </div>
   </fieldset>
 
-  <input class="btn  form__btn" type="submit" value="Отправить отзыв">
-
-  <span class="form__warn">* — обязательные поля</span>
+  <div class="form__wrap  form__wrap--submit">
+    <input class="form__btn" type="submit" value="Отправить отзыв">
+    <span class="form__warn">* — обязательные поля</span>
+  </div>
 
 </form>
 
-<!-- </div> -->
-
-<div class="modal  modal--error  modal--off">
+<div class="modal  modal--error-">
   <div class="modal__wrap">
     <h2 class="modal__title">Что-то пошло не так</h2>
     <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли&nbsp;их&nbsp;заполнить</p>
@@ -161,10 +146,10 @@
   </div>
 </div>
 
-<div class="modal  modal--success  modal--off">
+<div class="modal  modal--success-">
   <div class="modal__wrap">
     <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-    <p class="modal__text  modal__text--success-custom">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить заполнить заполнить заполнить заполнить</p>
+    <p class="modal__text  modal__text--success-custom">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <button class="btn  modal__btn  modal__btn--success">Закрыть окно</button>
   </div>
 </div>

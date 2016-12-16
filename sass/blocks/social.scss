@@ -5,8 +5,11 @@
   padding-top: 17px;
   padding-bottom: 17px;
   @media #{$tablet-width} {
-    width: 33%;
+    width: 33.33%;
     margin-bottom: 0;
+  }
+  @media #{$desktop-width} {
+    margin-right: auto;
   }
 }
 .social__item {

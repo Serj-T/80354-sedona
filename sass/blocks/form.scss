@@ -4,16 +4,26 @@ form {
   @media #{$tablet-width} {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-right: 7.8%;//60px;
+    padding-left: 7.8%;//60px;
+  }
+  @media #{$desktop-width} {
+    padding-right: 10%;//120px;
+    padding-left: 10%;//120px;
   }
 }
 .form {
   @media #{$only-mobile} {
     border-top: 1px solid #e5e5e5;
   }
-
   &--name {
     @media #{$tablet-width} {
-    width: 50%;
+      margin-left: 8.8%;//58px;
+      width: 41.2%; //50%;
+    }
+    @media #{$desktop-width} {
+      margin-left: 8.3%;//80px;
+      width: 41.7%; //400px;
     }
   }
   &--contact {
@@ -23,8 +33,18 @@ form {
   }
   &--quiz {
     @media #{$tablet-width} {
+      position: relative;
       width: 50%;
       order: -10;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 23px;
+        right: 0;
+        bottom: 25px;
+        width: 1px;
+        background-color: #dbdbdb;
+      }
     }
   }
   &--visit {
@@ -37,25 +57,56 @@ form {
       width: 100%;
     }
   }
-
 }
 .form__wrap {
-  //@include wrap();
   display: flex;
   flex-direction: column;
-  padding-top: 3px;
-  padding-bottom: 5px;
+  @media #{$only-mobile} {
+    padding-right: 6.3%;//20px;
+    padding-left: 6.3%;//20px;
+  }
+  &--contact {
+    @media #{$tablet-width} {
+      margin-top: 21px;
+    }
+    @media #{$tablet-width} {
+      margin-top: 27px;
+    }
+  }
   &--quiz {
-    //padding-bottom: 18px;
+    @media #{$only-mobile} {
+      padding-bottom: 16px;
+    }
+    @media #{$desktop-width} {
+      padding-left: 4px;
+    }
   }
   &--visit {
+    @media #{$only-mobile} {
+      padding-bottom: 2px;
+    }
     @media #{$tablet-width} {
       flex-direction: row;
       justify-content: flex-start;
       flex-wrap: wrap;
+      margin-top: 12px;
     }
     @media #{$desktop-width} {
       justify-content: space-between;
+      margin-top: 11px;
+    }
+  }
+  &--review {
+    @media #{$tablet-width} {
+      margin-top: 18px;
+    }
+  }
+  &--submit {
+    @media #{$tablet-width} {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 37px;
     }
   }
 }
@@ -64,26 +115,42 @@ form {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-
   &--contact {
     @media #{$desktop-width} {
       flex-direction: row;
+      justify-content: space-between;
+    }
+    @media #{$desktop-width} {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
   &--quiz {
     @media #{$tablet-width} {
       align-items: flex-start;
+      margin-top: 36px;
+    }
+    @media #{$desktop-width} {
+      margin-top: 37px;
     }
   }
   &--visit {
     @media #{$tablet-width} {
       flex-direction: row;
       justify-content: space-between;
-      padding-right: 0;
+      padding-right: 35px;
       padding-left: 95px;
     }
     @media #{$desktop-width} {
       padding: 0;
+    }
+  }
+  &--name {
+    @media #{$tablet-width} {
+      margin-top: 36px;
+    }
+    @media #{$desktop-width} {
+      margin-top: 37px;
     }
   }
 }
@@ -94,13 +161,47 @@ form {
 .form__title {
   display: block;
   width: 100%;
+  margin-top: 18px;
   margin-bottom: 21px;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
   text-align: center;
-  &--visit-custom {
+  @media #{$tablet-width} {
+    font-size: 21px;
+    text-align: left;
+  }
+  &--contact {
+    @media #{$tablet-width} {
+      @include form-border();
+      margin-bottom: 27px;
+    }
+    @media #{$desktop-width} {
+      margin-bottom: 74px;
+    }
+  }
+  &--visit {
     margin-bottom: 16px;
+    @media #{$tablet-width} {
+      @include form-border();
+      margin-bottom: 42px;
+    }
+  }
+  &--review {
+    @media #{$only-mobile} {
+      margin-bottom: 18px;
+    }
+    @media #{$tablet-width} {
+      @include form-border();
+      margin-bottom: 60px;
+    }
+  }
+  &--quiz {
+    @media #{$desktop-width} {
+      @include form-border();
+      width: auto;
+      padding-left: 80px;
+    }
   }
 }
 .form__field {
@@ -110,14 +211,31 @@ form {
   &--contact {
     position: relative;
     flex-wrap: wrap;
-    margin-top: 21px;
-    margin-bottom: 2px;
-    // padding-bottom: 21px;
+    @media #{$only-mobile} {
+      /*Для размещения span-ошибки ввода без увелечиная размера блока*/
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      min-height: 120px;
+      margin-bottom: 0;
+    }
     @media #{$tablet-width} {
       justify-content: space-between;
     }
     @media #{$desktop-width} {
       width: 50%;
+      align-items: baseline;
+    }
+  }
+  &--contact-custom {
+    @media #{$only-mobile} {
+      margin-bottom: 12px;
+    }
+    @media #{$tablet-width} {
+      margin-bottom: 23px;
+    }
+    @media #{$desktop-width} {
+      width: 42%;
     }
   }
   &--review {
@@ -133,7 +251,9 @@ form {
 .form__name-input {
   flex-grow: 1;
   width: 100%;
-  padding: 21px 22px;
+  min-height: 58px;
+  padding-right: 22px;
+  padding-left: 22px;
 }
 .form__field-wrap {
   position: relative;
@@ -146,14 +266,20 @@ form {
 .form__contact-input {
   box-sizing: border-box;
   width: 100%;
-  padding: 21px 22px;
+  min-height: 58px;
   padding-right: 58px;
+  padding-left: 22px;
+  //padding: 21px 22px;
 }
 .form__contact-label {
   padding-bottom: 7px;
   padding-left: 22px;
   @media #{$tablet-width} {
     order: -10;
+  }
+  @media #{$desktop-width} {
+    padding-left: 0;
+    padding-right: 16px;
   }
 }
 .form__contact-icon {
@@ -173,6 +299,7 @@ form {
 }
 .form__error-tel,
 .form__error-mail {
+  line-height: 14px;
   color: #ff5c5c;
   text-transform: none;
   &--on {
@@ -181,27 +308,19 @@ form {
   &--off {
     display: none;
   }
+  @media #{$only-mobile} {
+    margin-top: 11px;
+    padding-left: 22px;
+  }
   @media #{$tablet-width} {
+    margin-bottom: 10px;
     order: -1;
   }
   @media #{$desktop-width} {
     position: absolute;
-    top: -30px;
-    left: 30%;
-    // order: -12;
-    // width: 100%;
+    top: -27px;
+    left: 27%;
   }
-}
-
-@mixin radiocheck-style() {
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 78px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
-  text-transform: none;
 }
 .form__quiz-label {
   position: relative;
@@ -213,7 +332,6 @@ form {
   font-weight: bold;
   color: #000000;
   text-transform: none;
-
   &::before {
     content: "";
     position: absolute;
@@ -224,9 +342,11 @@ form {
     border-radius: 50%;
     background-color: #f2f2f2;
   }
+  @media #{$tablet-width} {
+    margin-bottom: 22px;
+  }
 }
 .form__quiz-input:checked + .form__quiz-label {
-
   &::after {
     content: "";
     position: absolute;
@@ -254,13 +374,13 @@ form {
   @media #{$tablet-width} {
     box-sizing: border-box;
     width: 50%;
+    margin-bottom: 33px;
   }
   @media #{$desktop-width} {
     width: auto;
   }
 }
 .form__visit-input:checked + .form__visit-label {
-
   &::after {
     content: "";
     position: absolute;
@@ -275,30 +395,33 @@ form {
 }
 .form__textarea {
   width: 100%;
-  border: none;
-  outline: none;
-  padding: 15px 20px;
-  background-color: #f2f2f2;
+  padding: 16px 20px;
 }
 .form__btn {
-  //@include wrap;
+  @include btn();
   width: 100%;
   margin-top: 25px;
   margin-bottom: 45px;
+  font-size: 21px;
   line-height: 58px;
   text-transform: uppercase;
+  @media #{$only-mobile} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 324px;
+  }
   @media #{$tablet-width} {
+    width: 50%;
     margin: 0;
+  }
+  @media #{$desktop-width} {
     width: 50%;
   }
 }
 .form__warn {
+  align-self: center;
   @media #{$only-mobile} {
-    display: none;  /* поменять на вижуали хидден */
-  }
-  @media #{$tablet-width} {
-    margin-left: auto;
-    align-self: center;
+    display: none;  /* поменять на хидден */
   }
 }
 /* Очередность */
@@ -310,5 +433,12 @@ label[for="park"] {
 label[for="red-rocks"] {
   @media #{$tablet-width} {
     order: 2;
+  }
+}
+/* Сокращение слов в label */
+.form__hidden {
+  @media #{$desktop-width} {
+    display: none;
+    //font-size: 0;
   }
 }

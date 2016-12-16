@@ -5,18 +5,46 @@
   @media #{$only-mobile} {
     border-top: 1px solid #e5e5e5;
   }
+  @media #{$tablet-width} {
+    padding-bottom: 50px;
+  }
+  @media #{$desktop-width} {
+    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 93px;
+  }
 }
 .video__wrap {
-  //@include wrap;
   padding-top: 17px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   text-align: center;
+  @media #{$tablet-width} {
+    margin-bottom: 40px;
+  }
 }
 .video__title {
+  max-width: 440px;
+  margin-right: auto;
   margin-bottom: 27px;
+  margin-left: auto;
   font-size: 18px;
   line-height: 26px;
+  color: #000000;
+  @media #{$tablet-width} {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  @media #{$desktop-width} {
+    margin-top: 55px;
+  }
 }
 .video__text {
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   line-height: 24px;
 }

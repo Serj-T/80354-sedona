@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Серж Т](https://up.htmlacademy.ru/adaptive/9/user/80354).
-* Наставник: `сами-с-усами`.
+* Наставник: [Серж Т](https://up.htmlacademy.ru/adaptive/9/user/80354).
 
 ---
 
