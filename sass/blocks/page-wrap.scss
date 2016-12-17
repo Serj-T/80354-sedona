@@ -1,19 +1,17 @@
 .page-wrap {
   display: flex;
   flex-direction: column;
-  &--index {
-  }
   &--photo {
-    //align-items: center;
     @media #{$tablet-width} {
       flex-direction: row;
-      justify-content: flex-start;
       flex-wrap: wrap;
-      width: 648px;
       margin: 0 auto;
+      padding-right: 7.8%;//60px;
+      padding-left: 7.8%;//60px;
     }
     @media #{$desktop-width} {
-      width: 1200px;
+      padding-right: 10%;//120px;
+      padding-left: 10%;//120px;
     }
   }
   &--form {
@@ -21,6 +19,12 @@
       flex-direction: row;
       flex-wrap: wrap;
       margin-bottom: 70px;
+      padding-right: 7.8%;//60px;
+      padding-left: 7.8%;//60px;
+    }
+    @media #{$desktop-width} {
+      padding-right: 10%;//120px;
+      padding-left: 10%;//120px;
     }
   }
 }

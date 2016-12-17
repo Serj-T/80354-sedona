@@ -1,16 +1,6 @@
 form {
   display: flex;
   flex-direction: column;
-  @media #{$tablet-width} {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-right: 7.8%;//60px;
-    padding-left: 7.8%;//60px;
-  }
-  @media #{$desktop-width} {
-    padding-right: 10%;//120px;
-    padding-left: 10%;//120px;
-  }
 }
 .form {
   @media #{$only-mobile} {

@@ -2,16 +2,17 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 113px;
+  width: 100%;
+  max-width: 800px;
   @media #{$only-mobile} {
     border-top: 1px solid #e5e5e5;
   }
   @media #{$tablet-width} {
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 50px;
   }
   @media #{$desktop-width} {
-    align-self: center;
-    margin-right: auto;
-    margin-left: auto;
     padding-bottom: 93px;
   }
 }

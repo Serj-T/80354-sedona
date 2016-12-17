@@ -15,14 +15,7 @@
     padding-right: 49px;
   }
 }
-@mixin clearfix() {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-// фиксирует окно + резина раcтягивает. custom-width - размер попапа
+// фиксирует окно + резина раcтягивает. modal-width - размер попапа
 @mixin modal-fix($modal-width) {
   display: block;
   position: fixed;
@@ -85,7 +78,8 @@
 @mixin form-border() {
   position: relative;
   text-align: center;
-  &::after {
+  &::after,
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -96,19 +90,10 @@
     background-color: #dbdbdb;
   }
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
     left: 0;
-    width: 19%;
-    height: 1px;
-    background-color: #dbdbdb;
   }
   @media #{$desktop-width} {
-    &::after {
-      width: 29%;
-    }
+    &::after,
     &::before {
       width: 29%;
     }
