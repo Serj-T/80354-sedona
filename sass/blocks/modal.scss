@@ -17,7 +17,6 @@
   }
 }
 .modal__wrap {
-  //@include wrap();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +29,7 @@
   }
 }
 .modal__btn {
+  @include btn();
   width: 100%;
   max-width: 458px;
   &--error {

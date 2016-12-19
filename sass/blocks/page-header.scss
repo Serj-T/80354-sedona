@@ -32,36 +32,38 @@
 }
 .page-header__background {
   box-sizing: border-box;
+  width: 100%;
   height: 158px;
   margin-bottom: 38px;
   padding-top: 51px;
   text-align: center;
-  background-size: cover;
   background: url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+  background-size: cover;
   @media #{$tablet-width} {
     height: 290px;
     margin-bottom: 75px;
     padding-top: 70px;
-    background: lightgrey;
   }
   @media #{$desktop-width} {
     height: 300px;
     margin-bottom: 115px;
-    background: lightgreen;
   }
   &--big {
     height: 389px;
     padding-top: 90px;
     background-position: 50% 0;
+    //background-size: cover;
     @media #{$tablet-width} {
       height: 518px;
       margin-bottom: 50px;
       padding-top: 70px;
-      background: lightgrey;
+      // @media #{$retina} {
+      //   background: url("../../img/bg-back-desktop@2x.jpg") no-repeat 50% 100%;
+      //   background-size: 100%, auto;
+      // }
     }
     @media #{$desktop-width} {
       padding-top: 78px;
-      background: lightgreen;
     }
   }
 }

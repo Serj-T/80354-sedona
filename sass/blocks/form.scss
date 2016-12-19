@@ -1,7 +1,3 @@
-form {
-  display: flex;
-  flex-direction: column;
-}
 .form {
   @media #{$only-mobile} {
     border-top: 1px solid #e5e5e5;
@@ -188,7 +184,6 @@ form {
   }
   &--quiz {
     @media #{$desktop-width} {
-      @include form-border();
       width: auto;
       padding-left: 80px;
     }
@@ -238,12 +233,26 @@ form {
     padding-right: 16px;
   }
 }
+@mixin input-action() {
+  &:hover {
+    background-color: #e5e5e5;
+    transition: background-color .4s,
+                box-shadow .4s;
+  }
+  &:focus {
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+    background-color: #ffffff;
+    transition: background-color .4s,
+                box-shadow .4s;
+  }
+}
 .form__name-input {
   flex-grow: 1;
   width: 100%;
   min-height: 58px;
   padding-right: 22px;
   padding-left: 22px;
+  @include input-action();
 }
 .form__field-wrap {
   position: relative;
@@ -260,6 +269,7 @@ form {
   padding-right: 58px;
   padding-left: 22px;
   //padding: 21px 22px;
+  @include input-action();
 }
 .form__contact-label {
   padding-bottom: 7px;
@@ -275,7 +285,7 @@ form {
 .form__contact-icon {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   width: 58px;
   height: 58px;
   &--tel {
@@ -332,6 +342,7 @@ form {
     border-radius: 50%;
     background-color: #f2f2f2;
   }
+  @include radiocheck-action();
   @media #{$tablet-width} {
     margin-bottom: 22px;
   }
@@ -361,6 +372,7 @@ form {
     border-radius: 4px;
     background-color: #f2f2f2;
   }
+  @include radiocheck-action();
   @media #{$tablet-width} {
     box-sizing: border-box;
     width: 50%;
@@ -386,6 +398,7 @@ form {
 .form__textarea {
   width: 100%;
   padding: 16px 20px;
+  @include input-action();
 }
 .form__btn {
   @include btn();

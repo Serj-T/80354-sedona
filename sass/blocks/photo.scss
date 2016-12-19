@@ -43,8 +43,8 @@
 }
 .photo__img {
   display: block; /*Сброс нижнего оступа*/
-  height: 280px;
   width: 100%;
+  height: 280px;
   @media #{$tablet-width} {
     height: 267px;
     background-color: lightgrey;

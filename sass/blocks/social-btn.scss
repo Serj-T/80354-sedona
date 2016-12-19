@@ -1,0 +1,17 @@
+.social-btn {
+  @include btn();
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+
+  &--twitter {
+    background: $blue url("../../img/icon-twitter.svg") no-repeat 50% 50%;
+  }
+  &--facebook {
+    width: 47px;
+    background: $blue url("../../img/icon-facebook.svg") no-repeat 50% 50%;
+  }
+  &--youtube {
+    background: $blue url("../../img/icon-youtube.svg") no-repeat 50% 50%;
+  }
+}

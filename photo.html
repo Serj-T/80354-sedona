@@ -18,7 +18,7 @@
     </button>
     <ul class="main-nav__list">
       <li class="main-nav__item"><a href="index.html">Главная</a></li>
-      <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
+      <li class="main-nav__item"><a>Фото и видео</a></li>
       <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
       <li class="main-nav__item"><a href="https://htmlacademy.ru/">Html academy</a></li>
     </ul>
@@ -55,7 +55,7 @@
     <figcaption class="photo__info">
       <div class="photo__info-wrap">
         <h3 class="photo__title">Неродные просторы</h3>
-        <span class="photo__author">Автор фото: Борис</span>
+        <span class="photo__author">Автор фото: <span class="photo__author-name">Борис</span></span>
       </div>
       <div class="likes">
         <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
@@ -71,7 +71,7 @@
     <figcaption class="photo__info">
       <div class="photo__info-wrap">
         <h3 class="photo__title">Местная растительность</h3>
-        <span class="photo__author">Автор фото: Сергей</span>
+        <span class="photo__author">Автор фото: <span class="photo__author-name">Сергей</span></span>
       </div>
       <div class="likes">
         <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
@@ -87,7 +87,7 @@
     <figcaption class="photo__info">
       <div class="photo__info-wrap">
         <h3 class="photo__title">Дорога на север</h3>
-        <span class="photo__author">Автор фото: Петр</span>
+        <span class="photo__author">Автор фото: <span class="photo__author-name">Петр</span></span>
       </div>
       <div class="likes">
         <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
@@ -103,7 +103,7 @@
     <figcaption class="photo__info">
       <div class="photo__info-wrap">
         <h3 class="photo__title">Мост дьявола</h3>
-        <span class="photo__author">Автор фото: Антон</span>
+        <span class="photo__author">Автор фото: <span class="photo__author-name">Антон</span></span>
       </div>
       <div class="likes">
         <img class="likes-icon" src="img/icon-like.svg" alt="Лайк">
@@ -119,18 +119,16 @@
     </div>
 
     <div class="video-player">
-      <video src="#" poster="img/video-mobile@1x.jpg"></video>
+      <video src="#"></video> <!-- poster="img/video-mobile@1x.jpg" -->
       <div class="video-player__panel">
-        <!-- <div class="video-player__panel-wrap"> -->
-          <div class="video-player__bar">
-            <div class="video-player__scale">
-              <div class="video-player__scale-runner" style="left: 16%;"></div>
-            </div>
+        <div class="video-player__bar">
+          <div class="video-player__scale">
+            <div class="video-player__scale-runner" style="left: 16%;"></div>
           </div>
-          <input type="button" name="replay" class="video-player__btn  video-player__btn--replay" value="replay">
-          <input type="button" name="subs" class="video-player__btn  video-player__btn--subs" value="subs">
-          <input type="button" name="fullscreen" class="video-player__btn  video-player__btn--full" value="fullscreen">
-        <!-- </div> -->
+        </div>
+        <input type="button" name="replay" class="video-player__btn  video-player__btn--replay" value="replay">
+        <input type="button" name="subs" class="video-player__btn  video-player__btn--subs" value="subs">
+        <input type="button" name="fullscreen" class="video-player__btn  video-player__btn--full" value="fullscreen">
       </div>
     </div>
 

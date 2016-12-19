@@ -31,15 +31,16 @@
     }
   }
 }
-.main-nav__item a {
+.main-nav__item a,
+.main-nav__item a[href] {
+  cursor: pointer;
   @media #{$only-mobile} {
     @include btn();
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
                 inset 0px -1px 0px 0px rgba(0,0,0,.2);
   }
   @media #{$tablet-width} {
-    font-weight: bold;
-    color: #000000;
+    @include links-action($color-link, $color-link-hover, $color-link-down);
   }
 }
 .main-nav__item:first-child a {
@@ -52,6 +53,19 @@
   @media #{$only-mobile} {
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,.2),
                 inset 0px -6px 5px -6px rgba(0,0,0,.5);
+  }
+}
+//Cостояние текущих ссылок при взаимодействии
+.main-nav__item a {
+  @media #{$tablet-width} {
+    cursor: pointer;
+    @include links-action(#766357, #604e43, rgba(#766357, .3));
+  }
+}
+//Cостояние disabled кнопки при отсутствии ссылки
+.main-nav__item a[href=""] {
+  @media #{$only-mobile} {
+    @include btn-disabled();
   }
 }
 .main-nav__btn-open {
