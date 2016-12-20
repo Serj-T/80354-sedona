@@ -6,19 +6,23 @@
     min-width: 65px;
   }
 }
-.likes-icon {
+.likes-icon__btn {
+  @include btn-reset();
   position: absolute;
   left: 0;
   top: -1px;
 }
-.likes-count {
+.likes-icon__btn path {
+  fill: rgba(#000000, .3);
+  @media #{$desktop-width} {
+    fill: #ffffff;
+  }
+}
+.likes__count {
   padding-left: 37px;
   font-weight: bold;
   line-height: 24px;
   @media #{$tablet-width} {
     padding-left: 33px;
   }
-}
-picture {
-  height: 0;
 }

@@ -33,6 +33,7 @@
 }
 .main-nav__item a,
 .main-nav__item a[href] {
+  text-align: center;
   cursor: pointer;
   @media #{$only-mobile} {
     @include btn();
@@ -81,10 +82,14 @@
     z-index: 90;
   }
 }
+.main-nav--opened .main-nav__btn-open {
+  display: none;
+}
 .main-nav__btn-close {
   display: none;
 }
-.main-nav--opened .main-nav__btn-close {
+.main-nav--opened .main-nav__btn-close,
+.main-nav--nojs .main-nav__btn-close {
   @media #{$only-mobile} {
     @include btn-reset()
     position: absolute;
@@ -95,7 +100,7 @@
     z-index: 90;
   }
 }
-.main-nav--nojs .main-nav__list {
+.main-nav--nojs .main-nav__item {
   @media #{$only-mobile} {
     display: block;
   }

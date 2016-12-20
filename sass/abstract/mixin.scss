@@ -15,7 +15,7 @@
     padding-right: 49px;
   }
 }
-// фиксирует 123 и растягивает модальное окно до указанного $modal-width размера
+// фиксирует и растягивает модальное окно до указанного $modal-width размера
 @mixin modal-fix($modal-width) {
   display: block;
   position: fixed;
