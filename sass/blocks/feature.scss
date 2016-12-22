@@ -9,7 +9,7 @@
     background-color: $grey;
     color: $text-color;
     @media #{$tablet-width} {
-      width: 33.33%;
+      width: 33.333333%;
     }
   }
   @media #{$tablet-width} {
@@ -20,9 +20,6 @@
 .feature__wrap {
   box-sizing: border-box;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 39px;
   padding-right: 20px;
   padding-bottom: 26px;
@@ -40,14 +37,14 @@
     }
     @media #{$desktop-width} {
       padding-top: 35px;
-      padding-right: 70px;
-      padding-left: 70px;
+      padding-right: 65px;
+      padding-left: 65px;
     }
   }
   &--grey {
-    padding-top: 10px;
+    padding-top: 11px;
     padding-right: 6.25%;
-    padding-bottom: 14px;
+    padding-bottom: 13px;
     padding-left: 6.25%;
     @media #{$tablet-width} {
       padding-top: 27px;
@@ -56,13 +53,17 @@
       padding-left: 48px;
     }
     @media #{$desktop-width} {
-      padding-bottom: 50px;
+      padding-bottom: 52px;
     }
   }
   &--custom {
     @media #{$only-mobile} {
       padding-top: 22px;
       padding-bottom: 24px;
+    }
+    @media #{$desktop-width} {
+      padding-right: 75px;
+      padding-left: 75px;
     }
   }
   &--angle {
@@ -103,6 +104,8 @@
   margin-bottom: 8px;
   @media #{$tablet-width} {
     max-width: 155px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 21px;
   }
 }
@@ -114,6 +117,16 @@
   }
   @media #{$tablet-width} {
     margin-top: 20px;
+  }
+  @media #{$desktop-width} {
+    margin-top: 18px;
+  }
+  &--grey {
+    @media #{$desktop-width} {
+      width: 218px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 .feature__image {
@@ -129,7 +142,7 @@
     @media #{$retina} {
       background-image: url("../../img/photo-city-mobile@2x.jpg");
     }
-    @media (min-width: 512px){
+    @media #{$tablet-width} {
       background-image: url("../../img/photo-city-tablet@1x.jpg");
       @media #{$retina} {
         background-image: url("../../img/photo-city-tablet@2x.jpg");
@@ -148,7 +161,7 @@
     @media #{$retina} {
       background-image: url("../../img/photo-bridge-mobile@2x.jpg");
     }
-    @media (min-width: 512px) {
+    @media #{$tablet-width} {
       background-image: url("../../img/photo-bridge-tablet@1x.jpg");
       @media #{$retina} {
         background-image: url("../../img/photo-bridge-tablet@2x.jpg");

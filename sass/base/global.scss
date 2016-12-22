@@ -1,13 +1,12 @@
 html {
   height: 100%;
-  background-color: transparent;//#f2f2f2;
+  background-color: #f2f2f2;
 }
 body {
   /* Pixel perfect width */
   //width: 320px;
   //width: 768px;
   //width: 1200px;
-
   min-width: 320px;
   max-width: 1200px;
   margin: auto;

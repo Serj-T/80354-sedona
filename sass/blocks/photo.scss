@@ -15,15 +15,16 @@
   }
   @media #{$tablet-width} {
     width: 50%;
+    margin: 0;
     padding: 0;
   }
   &:first-of-type{
     @media #{$tablet-width} {
-      width: 100%;
+      width: 1200px;
     }
   }
   @media #{$desktop-width} {
-    width: 33.33%;
+    width: 400px;
     padding: 0;
   }
 }
@@ -41,7 +42,7 @@
   }
 }
 .photo__img {
-  display: block; /*Сброс нижнего оступа*/
+  display: block;
   width: 100%;
   height: 280px;
   @media #{$only-mobile} {
@@ -73,11 +74,14 @@
     padding-left: 20px;
     background-color: #f2f2f2;
   }
+  &--darken {
+    @media #{$tablet-width} {
+      background-color: #eaeaea;
+    }
+  }
   @media #{$desktop-width} {
     position: absolute;
     bottom: 0;
-    //box-sizing: border-box;
-    //width: 100%;
     background-color: rgba(#000000, .3);
     color: #ffffff;
   }
@@ -86,6 +90,9 @@
   @media #{$only-mobile} {
     margin-bottom: 7px;
   }
+}
+.photo__info:nth-of-type() {
+  background-color: red;//#eaeaea;
 }
 .photo__title {
   margin: 0;

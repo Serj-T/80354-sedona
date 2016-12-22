@@ -8,6 +8,9 @@
   @media #{$tablet-width} {
     flex-direction: row;
     align-items: center;
+    padding-top: 8px;
+  }
+  @media #{$desktop-width} {
     padding-top: 7px;
   }
 }

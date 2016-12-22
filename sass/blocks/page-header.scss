@@ -5,19 +5,22 @@
   }
   &--index {
     @media #{$tablet-width} {
-      margin-bottom: 50px;//12px;
+      margin-bottom: 49px;
     }
   }
   &--photo {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     @media #{$tablet-width} {
-      margin-bottom: 69px;
+      margin-bottom: 68px;
+    }
+    @media #{$desktop-width} {
+      margin-bottom: 70px;
     }
   }
   &--form {
     margin-bottom: 17px;
     @media #{$tablet-width} {
-      margin-bottom: 57px;
+      margin-bottom: 55px;
     }
     @media #{$desktop-width} {
       margin-bottom: 38px;
@@ -32,10 +35,12 @@
   box-sizing: border-box;
   width: 100%;
   height: 158px;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
   padding-top: 51px;
   text-align: center;
-  background: $blue url("../../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
   &::after {
     content: "";
     position: absolute;
@@ -44,10 +49,10 @@
     width: 100%;
     height: 57px;
     background: url("../../img/bg-intro-triangle-desktop.svg") no-repeat 50%;
-    background-size: 1200px;
+    background-size: 1201px;
   }
   @media #{$retina} {
-    background-image: url("../../img/bg-back-mobile@2x.jpg") no-repeat;
+    background-image: url("../../img/bg-back-mobile@2x.jpg");
   }
   @media #{$tablet-width} {
     height: 290px;
@@ -102,7 +107,6 @@
     padding: 0 25px;
   }
   @media #{$tablet-width} {
-    //margin-top: 74px;
     margin-bottom: 31px;
     font-size: 30px;
   }
@@ -111,11 +115,6 @@
     @media #{$tablet-width} {
       margin-bottom: 29px;
       font-size: 21px;
-    }
-  }
-  &--photo {
-    @media #{$desktop-width} {
-      //margin-top: 115px;
     }
   }
   &--form {
