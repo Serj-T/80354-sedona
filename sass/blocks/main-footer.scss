@@ -1,5 +1,3 @@
-.main-footer {
-}
 .main-footer__wrap {
   display: flex;
   flex-direction: column;
@@ -10,13 +8,15 @@
   @media #{$tablet-width} {
     flex-direction: row;
     align-items: center;
+    padding-top: 8px;
+  }
+  @media #{$desktop-width} {
     padding-top: 7px;
   }
 }
 .main-footer__title {
   @media #{$tablet-width} {
     width: 33.33%;
-
   }
 }
 .main-footer__copyright {
@@ -30,7 +30,18 @@
     padding-right: 43px;
   }
 }
-.main-footer__copyright img,
+.main-footer__copyright svg {
+  transition: fill .6s;
+  &:hover {
+    fill: #81b3d2;
+    transition: fill .4s;
+  }
+  &:active {
+    fill: rgba(#000000, .3);
+    transition: fill .4s;
+  }
+}
+.main-footer__copyright svg,
 .main-footer__copyright span {
   display: inline-block;
   vertical-align: middle;

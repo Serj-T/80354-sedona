@@ -15,14 +15,7 @@
     padding-right: 49px;
   }
 }
-@mixin clearfix() {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-// фиксирует окно + резина раcтягивает. custom-width - размер попапа
+// фиксирует и растягивает модальное окно до указанного $modal-width размера
 @mixin modal-fix($modal-width) {
   display: block;
   position: fixed;
@@ -37,13 +30,6 @@
     left: 50%;
     margin-left: -($modal-width)/2;
   }
-}
-@mixin btn-reset() {
-  display: block;
-  padding: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
 }
 @mixin placeholder() {
   &::-webkit-input-placeholder {
@@ -69,6 +55,23 @@
   color: #000000;
   text-transform: none;
 }
+@mixin radiocheck-action() {
+  &:hover::before {
+    background-color: #e5e5e5;
+    transition: background-color .4s;
+  }
+  &:active::before {
+    background-color: #d5d5d5;
+    transition: background-color .4s;
+  }
+}
+@mixin btn-reset() {
+  display: block;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
 @mixin btn() {
   @include btn-reset()
   display: block;
@@ -78,14 +81,56 @@
   color: #ffffff;
   font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
   background-color: $blue;
+  transition: background-color .4s;
   overflow: hidden;
+  &:hover {
+    background-color: #669ec0;
+    transition: background-color .4s;
+  }
+  &:active {
+    color: rgba(#ffffff, .3);
+    background-color: #5496bd;
+    transition: background-color .2s,
+                color .2s;
+  }
+  &:disabled {
+    @include btn-disabled();
+  }
+}
+@mixin btn-disabled() {
+  color: #ffffff;
+  background-color: #e5e5e5;
+  cursor: default;
+  &:hover {
+    color: #ffffff;
+    background-color: #e5e5e5;
+  }
+  &:active {
+    color: #ffffff;
+    background-color: #e5e5e5;
+  }
+}
+@mixin links-action($color-link, $color-link-hover, $color-link-down) {
+  font-weight: bold;
+  color: $color-link;
+  transition: color .2s;
+  &:hover{
+    color: $color-link-hover;
+    transition: color .2s;
+  }
+  &:active {
+    color: $color-link-down;
+    transition: color .2s;
+  }
 }
 // Граница в заголовке формы
 @mixin form-border() {
   position: relative;
   text-align: center;
-  &::after {
+  &::after,
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -96,19 +141,10 @@
     background-color: #dbdbdb;
   }
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
     left: 0;
-    width: 19%;
-    height: 1px;
-    background-color: #dbdbdb;
   }
   @media #{$desktop-width} {
-    &::after {
-      width: 29%;
-    }
+    &::after,
     &::before {
       width: 29%;
     }

@@ -1,0 +1,18 @@
+.social-btn {
+  @include btn();
+  display: flex;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+  &--facebook {
+    width: 47px;
+  }
+}
+.social-btn svg {
+  transition: opacity .4s;
+  margin: auto;
+}
+.social-btn:active svg {
+  opacity: .3;
+  transition: opacity .4s;
+}

@@ -1,20 +1,14 @@
 html {
   height: 100%;
-  background-color: transparent;//#f2f2f2;
+  background-color: #f2f2f2;
 }
 body {
   /* Pixel perfect width */
   //width: 320px;
   //width: 768px;
   //width: 1200px;
-
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: space-between;
-  //flex: auto;
   min-width: 320px;
   max-width: 1200px;
-  //min-height: 100%;
   margin: auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -73,5 +67,6 @@ textarea {
   background-color: #f2f2f2;
   @include placeholder {
     color: #000000;
+    opacity: 1;
   }
 }

@@ -4,11 +4,20 @@
   width: 102px;
   margin-left: -51px;
   z-index: 90;
-
   @media #{$only-mobile} {
     bottom: -36px;
   }
   @media #{$tablet-width} {
     top: 0px;
+  }
+  @media #{$desktop-width} {
+    width: 188px;
+    margin-left: -94px;
+  }
+}
+.logo img {
+  @media #{$desktop-width} {
+    width: 188px;
+    height: 96px;
   }
 }
