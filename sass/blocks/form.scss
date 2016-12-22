@@ -432,7 +432,7 @@
 .form__warn {
   align-self: center;
   @media #{$only-mobile} {
-    display: none;  /* поменять на хидден */
+    display: none;
   }
 }
 /* Очередность */
@@ -450,6 +450,5 @@ label[for="red-rocks"] {
 .form__hidden {
   @media #{$desktop-width} {
     display: none;
-    //font-size: 0;
   }
 }

@@ -41,6 +41,7 @@
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-position: 50% 100%;
   background-repeat: no-repeat;
+
   &::after {
     content: "";
     position: absolute;
@@ -77,12 +78,14 @@
     height: 389px;
     padding-top: 90px;
     background-position: 50% 0;
+    background-size: cover;
     @media #{$tablet-width} {
       height: 518px;
       margin-bottom: 50px;
       padding-top: 77px;
     }
     @media #{$desktop-width} {
+      height: 518px;
       padding-top: 78px;
     }
   }
