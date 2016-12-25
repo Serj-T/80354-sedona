@@ -14,10 +14,11 @@
   &--success-on {
     @include modal-fix(640px);
     padding-bottom: 20px;
-    background: linear-gradient(to top, #f2f2f2 30%, white 30%);
+    background: linear-gradient(to top, $grey 30%, #ffffff 30%);
+    box-shadow: 0 5px 15px 0 rgba(#000101, .15);
     @media #{$tablet-width} {
       padding-bottom: 42px;
-      background: linear-gradient(to top, #f2f2f2 41%, white 41%);
+      background: linear-gradient(to top, $grey 41%, #ffffff 41%);
     }
   }
 }

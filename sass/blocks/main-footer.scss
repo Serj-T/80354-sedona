@@ -30,7 +30,17 @@
     padding-right: 43px;
   }
 }
-.main-footer__copyright svg {
+.main-footer__copyright-icon,
+.main-footer__copyright span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-footer__copyright span {
+  margin-top: -3px;
+  margin-right: 10px;
+}
+.main-footer__copyright-icon {
+  fill: #000000;
   transition: fill .6s;
   &:hover {
     fill: #81b3d2;
@@ -40,13 +50,4 @@
     fill: rgba(#000000, .3);
     transition: fill .4s;
   }
-}
-.main-footer__copyright svg,
-.main-footer__copyright span {
-  display: inline-block;
-  vertical-align: middle;
-}
-.main-footer__copyright span {
-  margin-top: -3px;
-  margin-right: 10px;
 }

@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: $grey;
 }
 body {
   /* Pixel perfect width */
@@ -16,7 +16,7 @@ body {
   font-style: normal;
   color: $text-color;
   text-transform: uppercase;
-  background-color: white;
+  background-color: #ffffff;
   @media #{$desktop-width} {
     box-shadow: 0 0 25px 10px rgba(#000000, .1);
   }
@@ -24,7 +24,7 @@ body {
 h1 {
   font-size: 18px;
   line-height: 26px;
-  color: black;
+  color: #000000;
 }
 h2 {
   font-size: 21px;
@@ -64,7 +64,7 @@ textarea {
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
-  background-color: #f2f2f2;
+  background-color: $grey;
   @include placeholder {
     color: #000000;
     opacity: 1;

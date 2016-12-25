@@ -16,8 +16,8 @@
 .feature-list__item {
   position: relative;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
+  box-sizing: border-box;
   padding-top: 11px;
   padding-bottom: 3px;
   padding-left: 50px;
@@ -36,7 +36,7 @@
     }
   }
   &--motel {
-    background: url("../../img/icon-house.svg") no-repeat 2px 2px;
+    background: url("../img/icons/icon-house.svg") no-repeat 2px 2px;
     background-size: 38px;
     @media #{$tablet-width} {
       background-size: 75px;
@@ -47,7 +47,7 @@
     }
   }
   &--souvenir {
-    background: url("../../img/icon-gift.svg") no-repeat 5px 0;
+    background: url("../img/icons/icon-gift.svg") no-repeat 5px 0;
     background-size: 32px;
     @media #{$tablet-width} {
       background-size: 63px;
@@ -58,7 +58,7 @@
     }
   }
   &--food {
-    background: url("../../img/icon-burger.svg") no-repeat 0px 6px;
+    background: url("../img/icons/icon-burger.svg") no-repeat 0px 6px;
     background-size: 39px;
     @media #{$tablet-width} {
       background-size: 77px;

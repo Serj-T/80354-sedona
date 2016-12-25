@@ -1,7 +1,4 @@
 .booking__wrap {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   padding-top: 12px;
   padding-right: 20px;
   padding-bottom: 49px;
@@ -15,25 +12,25 @@
   }
 }
 .booking__title {
+  margin-bottom: 17px;
   color: #000000;
-  margin-bottom: 2px;
   text-align: center;
   @media #{$tablet-width} {
+    margin-bottom: 32px;
     font-size: 30px;
     line-height: auto;
-    margin-bottom: 32px;
   }
   @media #{$desktop-width} {
     margin-bottom: 30px;
   }
 }
 .booking__text {
-  line-height: 24px;
   margin-bottom: 36px;
+  line-height: 24px;
   text-align: center;
   @media (min-width: 457px) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     max-width: 458px;
   }
   @media #{$tablet-width} {
@@ -46,10 +43,10 @@
 .booking__btn {
   @include btn();
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 21px;
   line-height: 58px;
-  margin-left: auto;
-  margin-right: auto;
   @media (min-width: 457px) {
     max-width: 458px;
   }

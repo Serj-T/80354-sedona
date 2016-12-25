@@ -1,7 +1,6 @@
 .feature-row {
   display: flex;
   flex-direction: column;
-
   @media #{$tablet-width} {
     flex-direction: row;
     text-align: center;
