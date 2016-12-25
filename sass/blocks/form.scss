@@ -1,15 +1,15 @@
 .form {
   @media #{$only-mobile} {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $dark-grey;
   }
   &--name {
     @media #{$tablet-width} {
-      margin-left: 8.8%;//58px;
-      width: 41.2%; //50%;
+      margin-left: 8.8%;
+      width: 41.2%;
     }
     @media #{$desktop-width} {
-      margin-left: 8.3%;//80px;
-      width: 41.7%; //400px;
+      margin-left: 8.3%;
+      width: 41.7%;
     }
   }
   &--contact {
@@ -104,10 +104,6 @@
   flex-wrap: wrap;
   width: 100%;
   &--contact {
-    @media #{$desktop-width} {
-      flex-direction: row;
-      justify-content: space-between;
-    }
     @media #{$desktop-width} {
       flex-direction: row;
       justify-content: space-between;
@@ -210,8 +206,8 @@
       justify-content: space-between;
     }
     @media #{$desktop-width} {
-      width: 50%;
       align-items: baseline;
+      width: 50%;
     }
   }
   &--contact-custom {
@@ -237,12 +233,12 @@
 }
 @mixin input-action() {
   &:hover {
-    background-color: #e5e5e5;
+    background-color: $dark-grey;
     transition: background-color .4s,
                 box-shadow .4s;
   }
   &:focus {
-    box-shadow: inset 0 0 0 4px #e5e5e5;
+    box-shadow: inset 0 0 0 4px $dark-grey;
     background-color: #ffffff;
     transition: background-color .4s,
                 box-shadow .4s;
@@ -270,7 +266,6 @@
   min-height: 58px;
   padding-right: 58px;
   padding-left: 22px;
-  //padding: 21px 22px;
   @include input-action();
 }
 .form__contact-label {
@@ -291,12 +286,10 @@
   width: 58px;
   height: 58px;
   &--tel {
-    background: url("../../img/icon-phone.svg") no-repeat 50% 50%;
-    background-color: #e6e6e6;
+    background: #e6e6e6 url("../img/icons/icon-phone.svg") no-repeat 50% 50%;
   }
   &--mail {
-    background: url("../../img/icon-mail.svg") no-repeat 50% 50%;
-    background-color: #e6e6e6;
+    background: #e6e6e6 url("../img/icons/icon-mail.svg") no-repeat 50% 50%;
   }
 }
 .form__error-tel,
@@ -342,7 +335,7 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background-color: #f2f2f2;
+    background-color: $grey;
   }
   @include radiocheck-action();
   @media #{$tablet-width} {
@@ -358,7 +351,7 @@
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: $text-color;
   }
   &:active::after {
     opacity: .3;
@@ -375,7 +368,7 @@
     width: 56px;
     height: 56px;
     border-radius: 4px;
-    background-color: #f2f2f2;
+    background-color: $grey;
   }
   @include radiocheck-action();
   @media #{$tablet-width} {
@@ -396,8 +389,8 @@
     width: 19px;
     height: 10px;
     transform: rotate(-45deg);
-    border-bottom: 4px solid #333333;
-    border-left: 4px solid #333333;
+    border-bottom: 4px solid $text-color;
+    border-left: 4px solid $text-color;
   }
   &:active::after {
     opacity: .3;
@@ -432,7 +425,7 @@
 .form__warn {
   align-self: center;
   @media #{$only-mobile} {
-    display: none;  /* поменять на хидден */
+    display: none;
   }
 }
 /* Очередность */
@@ -450,6 +443,5 @@ label[for="red-rocks"] {
 .form__hidden {
   @media #{$desktop-width} {
     display: none;
-    //font-size: 0;
   }
 }

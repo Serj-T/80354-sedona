@@ -38,7 +38,7 @@
   margin-bottom: 39px;
   padding-top: 51px;
   text-align: center;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 100%;
   background-repeat: no-repeat;
   &::after {
@@ -48,41 +48,45 @@
     left: 0;
     width: 100%;
     height: 57px;
-    background: url("../../img/bg-intro-triangle-desktop.svg") no-repeat 50%;
+    background: url("../img/icons/bg-intro-triangle-desktop.svg") no-repeat 50%;
     background-size: 1201px;
   }
-  @media #{$retina} {
-    background-image: url("../../img/bg-back-mobile@2x.jpg");
+  @media #{$only-mobile} {
+    @media #{$retina} {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
   }
   @media #{$tablet-width} {
     height: 290px;
     margin-bottom: 75px;
     padding-top: 93px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: cover;
     @media #{$retina} {
-      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
   @media #{$desktop-width} {
     height: 300px;
     margin-bottom: 113px;
     padding-top: 102px;
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     @media #{$retina} {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
   &--big {
     height: 389px;
     padding-top: 90px;
     background-position: 50% 0;
+    background-size: cover;
     @media #{$tablet-width} {
       height: 518px;
       margin-bottom: 50px;
       padding-top: 77px;
     }
     @media #{$desktop-width} {
+      height: 518px;
       padding-top: 78px;
     }
   }
@@ -111,7 +115,9 @@
     font-size: 30px;
   }
   &--index {
+    @media #{$only-mobile} {
     margin-bottom: 28px;
+    }
     @media #{$tablet-width} {
       margin-bottom: 29px;
       font-size: 21px;
@@ -125,8 +131,8 @@
 }
 .page-header__text {
   max-width: 440px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   @media #{$only-mobile} {
     padding: 0 25px;
     margin-bottom: 5px;

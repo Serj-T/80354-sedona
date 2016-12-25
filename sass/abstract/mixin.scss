@@ -1,20 +1,3 @@
-@mixin wrap() {
-  width: 280px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: auto;
-
-  @media #{$tablet-width} {
-    width: 640px;
-    padding-left: 49px;
-    padding-right: 49px;
-  }
-  @media #{$desktop-width} {
-    width: 960px;
-    padding-left: 49px;
-    padding-right: 49px;
-  }
-}
 // фиксирует и растягивает модальное окно до указанного $modal-width размера
 @mixin modal-fix($modal-width) {
   display: block;
@@ -57,7 +40,7 @@
 }
 @mixin radiocheck-action() {
   &:hover::before {
-    background-color: #e5e5e5;
+    background-color: $dark-grey;
     transition: background-color .4s;
   }
   &:active::before {
@@ -101,15 +84,15 @@
 }
 @mixin btn-disabled() {
   color: #ffffff;
-  background-color: #e5e5e5;
+  background-color: $dark-grey;
   cursor: default;
   &:hover {
     color: #ffffff;
-    background-color: #e5e5e5;
+    background-color: $dark-grey;
   }
   &:active {
     color: #ffffff;
-    background-color: #e5e5e5;
+    background-color: $dark-grey;
   }
 }
 @mixin links-action($color-link, $color-link-hover, $color-link-down) {

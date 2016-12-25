@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 800px;
   @media #{$only-mobile} {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $dark-grey;
   }
   @media #{$tablet-width} {
     margin-right: auto;

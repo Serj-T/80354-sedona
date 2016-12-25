@@ -11,7 +11,7 @@
   padding-top: 23px;
   padding-bottom: 16px;
   @media #{$only-mobile} {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $dark-grey;
   }
   @media #{$tablet-width} {
     width: 50%;
@@ -66,13 +66,12 @@
   @media #{$tablet-width} {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     box-sizing: border-box;
     width: 100%;
     min-height: 80px;
-    padding-top: 0;
+    padding-top: 16px;
     padding-left: 20px;
-    background-color: #f2f2f2;
+    background-color: $grey;
   }
   &--darken {
     @media #{$tablet-width} {
@@ -81,6 +80,7 @@
   }
   @media #{$desktop-width} {
     position: absolute;
+    padding-top: 16px;
     bottom: 0;
     background-color: rgba(#000000, .3);
     color: #ffffff;
