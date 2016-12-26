@@ -27,10 +27,12 @@
     background-color: $blue;
     @media #{$tablet-width} {
       width: 33.33%;
+      height: 256px;
       padding-top: 27px;
       padding-right: 42px;
       padding-bottom: 20px;
       padding-left: 42px;
+      overflow: auto;
     }
     @media #{$desktop-width} {
       padding-top: 35px;
