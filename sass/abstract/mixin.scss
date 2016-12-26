@@ -109,27 +109,25 @@
   }
 }
 // Граница в заголовке формы
+$width-border: 50%;
 @mixin form-border() {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 1;
   text-align: center;
   &::after,
   &::before {
     content: "";
     display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 19%;
+    width: calc(#{$width-border} - 200px);
     height: 1px;
     background-color: #dbdbdb;
   }
-  &::before {
-    left: 0;
+  &::after {
+    margin-left: auto;
   }
-  @media #{$desktop-width} {
-    &::after,
-    &::before {
-      width: 29%;
-    }
+  &::before {
+    margin-right: auto;
   }
 }
