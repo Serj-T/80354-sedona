@@ -91,13 +91,14 @@
     margin-bottom: 7px;
   }
 }
-.photo__info:nth-of-type() {
-  background-color: red;//#eaeaea;
-}
 .photo__title {
   margin: 0;
   font-size: 14px;
   line-height: 24px;
+  color: #000000;
+  @media #{$desktop-width} {
+    color: #ffffff;
+  }
 }
 .photo__author {
   text-transform: none;

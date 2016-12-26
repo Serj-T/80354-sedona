@@ -21,9 +21,13 @@
 }
 .likes__count {
   padding-left: 37px;
-  font-weight: bold;
   line-height: 24px;
+  font-weight: bold;
+  color: #000000;
   @media #{$tablet-width} {
     padding-left: 33px;
+  }
+  @media #{$desktop-width} {
+    color: #ffffff;
   }
 }
