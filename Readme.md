@@ -1,4 +1,6 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+https://serj-t.github.io/sedona/build/
+
 
 * Студент: [Серж Т](https://up.htmlacademy.ru/adaptive/9/user/80354).
 * Наставник: [Серж Т](https://up.htmlacademy.ru/adaptive/9/user/80354).
